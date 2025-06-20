@@ -1,0 +1,37 @@
+{
+  "gameId": "xbox-pc-forza-horizon-5-003",
+  "recommendations": [
+    {
+      "id": "reco-forza-001",
+      "gameId": "xbox-microsoft-flight-simulator-009",
+      "title": "Microsoft Flight Simulator",
+      "cover": "assets/images/games/microsoft-flight-simulator.jpg",
+      "price": 89.99,
+      "reason": "Another Microsoft simulation game with stunning graphics"
+    },
+    {
+      "id": "reco-forza-002",
+      "gameId": "xbox-pc-fifa-24-012",
+      "title": "EA FC 24",
+      "cover": "assets/images/games/fifa-24.jpg",
+      "price": 89.99,
+      "reason": "Sports game with realistic graphics and competitive gameplay"
+    },
+    {
+      "id": "reco-forza-003",
+      "gameId": "pc-red-dead-redemption-2-006",
+      "title": "Red Dead Redemption 2",
+      "cover": "assets/images/games/red-dead-redemption-2.jpg",
+      "price": 84.99,
+      "reason": "Open-world game with beautiful landscapes and exploration"
+    },
+    {
+      "id": "reco-forza-004",
+      "gameId": "pc-elden-ring-004",
+      "title": "Elden Ring",
+      "cover": "assets/images/games/elden-ring.jpg",
+      "price": 59.99,
+      "reason": "Open-world adventure with vast exploration"
+    }
+  ]
+}

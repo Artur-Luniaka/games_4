@@ -1,0 +1,57 @@
+{
+  "gameId": "pc-cyberpunk-2077-002",
+  "reviews": [
+    {
+      "id": "rev-cyberpunk-001",
+      "userName": "NightCityExplorer",
+      "rating": 4,
+      "date": "2022-01-15",
+      "title": "Redemption Arc Complete",
+      "content": "After the rocky launch, CD Projekt Red has truly redeemed Cyberpunk 2077. The 2.0 update and Phantom Liberty DLC make this the game it should have been from the start. Night City is breathtaking.",
+      "verified": true,
+      "helpful": 156
+    },
+    {
+      "id": "rev-cyberpunk-002",
+      "userName": "VTech",
+      "rating": 5,
+      "date": "2022-02-01",
+      "title": "Cyberpunk Masterpiece",
+      "content": "The story, characters, and world-building are exceptional. Keanu Reeves as Johnny Silverhand is perfect casting. The RPG elements are deep and meaningful. This is now one of my favorite games ever.",
+      "verified": true,
+      "helpful": 234
+    },
+    {
+      "id": "rev-cyberpunk-003",
+      "userName": "ChromeRunner",
+      "rating": 3,
+      "date": "2021-12-20",
+      "title": "Good but Flawed",
+      "content": "The story and characters are great, but the open world feels lifeless compared to other games. Combat is fun but repetitive. Still worth playing for the narrative experience.",
+      "verified": true,
+      "helpful": 78
+    },
+    {
+      "id": "rev-cyberpunk-004",
+      "userName": "CyberpunkFan",
+      "rating": 4,
+      "date": "2022-01-30",
+      "title": "Solid RPG Experience",
+      "content": "The game has come a long way since launch. The world is immersive, the quests are well-written, and the character customization is extensive. Some bugs remain but nothing game-breaking.",
+      "verified": true,
+      "helpful": 92
+    },
+    {
+      "id": "rev-cyberpunk-005",
+      "userName": "NetrunnerPro",
+      "rating": 4,
+      "date": "2022-02-10",
+      "title": "Worth the Wait",
+      "content": "After all the patches and updates, Cyberpunk 2077 is finally the game we were promised. The city feels alive, the story is compelling, and the gameplay is smooth. Highly recommended.",
+      "verified": true,
+      "helpful": 167
+    }
+  ],
+  "averageRating": 4.0,
+  "totalReviews": 5
+}

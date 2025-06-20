@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - GameVault Australia</title>
+    <meta
+      name="description"
+      content="Complete your purchase at GameVault Australia. Secure checkout process."
+    />
+    <link rel="stylesheet" href="assets/styles/global-styles.css" />
+    <link rel="stylesheet" href="assets/styles/checkout-styles.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <main>
+      <section class="checkout-hero">
+        <div class="container">
+          <h1>Checkout</h1>
+          <p>Complete your purchase securely</p>
+        </div>
+      </section>
+
+      <section class="checkout-section">
+        <div class="container">
+          <div class="checkout-layout">
+            <div class="checkout-form-panel">
+              <div class="checkout-form-container">
+                <h2>Customer Information</h2>
+                <form id="checkoutForm" class="checkout-form" novalidate>
+                  <div class="form-group">
+                    <label for="customerName" class="form-label"
+                      >Full Name *</label
+                    >
+                    <input
+                      type="text"
+                      id="customerName"
+                      name="customerName"
+                      class="form-input"
+                      required
+                      placeholder="Enter your full name"
+                    />
+                    <div class="form-error" id="nameError"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="customerEmail" class="form-label"
+                      >Email Address *</label
+                    >
+                    <input
+                      type="email"
+                      id="customerEmail"
+                      name="customerEmail"
+                      class="form-input"
+                      required
+                      placeholder="Enter your email address"
+                    />
+                    <div class="form-error" id="emailError"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="customerPhone" class="form-label"
+                      >Phone Number</label
+                    >
+                    <input
+                      type="tel"
+                      id="customerPhone"
+                      name="customerPhone"
+                      class="form-input"
+                      placeholder="Enter your phone number (optional)"
+                    />
+                    <div class="form-error" id="phoneError"></div>
+                  </div>
+
+                  <div class="form-actions">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-full"
+                      id="placeOrderBtn"
+                    >
+                      Place Order
+                    </button>
+                    <a
+                      href="shopping-cart.html"
+                      class="btn btn-outline btn-full"
+                    >
+                      ← Back to Cart
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="order-summary-panel">
+              <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="order-items" id="orderItems">
+                  <!-- Order items will be loaded here -->
+                </div>
+                <div class="order-totals">
+                  <div class="total-item">
+                    <span>Subtotal</span>
+                    <span id="orderSubtotal">$0.00</span>
+                  </div>
+                  <div class="total-item">
+                    <span>Shipping</span>
+                    <span id="orderShipping">$0.00</span>
+                  </div>
+                  <div class="total-item total-final">
+                    <span>Total</span>
+                    <span id="orderTotal">$0.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Order Processing Modal -->
+    <div class="modal-overlay" id="processingModal" style="display: none">
+      <div class="modal-content">
+        <div class="processing-animation">
+          <div class="spinner"></div>
+          <h3>Processing Your Order</h3>
+          <p>Please wait while we process your payment...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div class="modal-overlay" id="successModal" style="display: none">
+      <div class="modal-content">
+        <div class="success-content">
+          <div class="success-icon">✅</div>
+          <h3>Order Placed Successfully!</h3>
+          <p>
+            Thank you for your purchase. You will receive a confirmation email
+            shortly.
+          </p>
+          <div class="order-details">
+            <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+            <p><strong>Total:</strong> <span id="orderTotalDisplay"></span></p>
+          </div>
+          <div class="success-actions">
+            <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script
+      type="module"
+      src="assets/scripts/modules/header-injector.js"
+    ></script>
+    <script
+      type="module"
+      src="assets/scripts/modules/footer-injector.js"
+    ></script>
+    <script
+      type="module"
+      src="assets/scripts/modules/contact-form-validator.js"
+    ></script>
+    <script
+      type="module"
+      src="assets/scripts/modules/checkout-processor.js"
+    ></script>
+  </body>
+</html>

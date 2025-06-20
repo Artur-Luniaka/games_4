@@ -1,0 +1,58 @@
+{
+  "gameId": "pc-red-dead-redemption-2-006",
+  "reviews": [
+    {
+      "id": "rev-rdr2-001",
+      "userName": "OutlawLegend",
+      "rating": 5,
+      "date": "2019-12-10",
+      "date": "2019-12-10",
+      "title": "Masterpiece of Storytelling",
+      "content": "Red Dead Redemption 2 is a work of art. The story of Arthur Morgan is one of the most compelling narratives in gaming history. The world is alive, the characters are memorable, and the attention to detail is staggering.",
+      "verified": true,
+      "helpful": 567
+    },
+    {
+      "id": "rev-rdr2-002",
+      "userName": "WesternFan",
+      "rating": 5,
+      "date": "2019-12-15",
+      "title": "Perfect Western Experience",
+      "content": "Rockstar has created the definitive Western game. Every aspect of the Wild West is captured perfectly - from the landscapes to the characters to the atmosphere. This is gaming at its absolute finest.",
+      "verified": true,
+      "helpful": 423
+    },
+    {
+      "id": "rev-rdr2-003",
+      "userName": "PCGamer2020",
+      "rating": 4,
+      "date": "2019-12-20",
+      "title": "Beautiful but Demanding",
+      "content": "The game is absolutely stunning on PC with max settings, but it requires a powerful rig to run smoothly. The story and world are incredible, though the controls can feel sluggish at times.",
+      "verified": true,
+      "helpful": 234
+    },
+    {
+      "id": "rev-rdr2-004",
+      "userName": "RockstarFan",
+      "rating": 5,
+      "date": "2019-12-25",
+      "title": "Rockstar's Best Work",
+      "content": "This surpasses even GTA V in terms of storytelling and world-building. Arthur Morgan is one of the most complex and well-written characters in gaming. The attention to detail is mind-blowing.",
+      "verified": true,
+      "helpful": 345
+    },
+    {
+      "id": "rev-rdr2-005",
+      "userName": "CowboyGamer",
+      "rating": 4,
+      "date": "2020-01-01",
+      "title": "Epic Western Adventure",
+      "content": "The scale and ambition of this game is incredible. The story is emotional and the world is vast and beautiful. Some pacing issues in the middle, but the overall experience is unforgettable.",
+      "verified": true,
+      "helpful": 189
+    }
+  ],
+  "averageRating": 4.6,
+  "totalReviews": 5
+}

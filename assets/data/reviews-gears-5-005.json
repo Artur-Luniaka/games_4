@@ -1,0 +1,57 @@
+{
+  "gameId": "xbox-gears-5-005",
+  "reviews": [
+    {
+      "id": "rev-gears-001",
+      "userName": "COGSoldier",
+      "rating": 4,
+      "date": "2019-09-15",
+      "title": "Best Gears Yet",
+      "content": "Gears 5 takes the series to new heights with its semi-open world design and emotional storytelling. The campaign is gripping, and the multiplayer modes are as polished as ever. A worthy successor.",
+      "verified": true,
+      "helpful": 234
+    },
+    {
+      "id": "rev-gears-002",
+      "userName": "LancerMaster",
+      "rating": 4,
+      "date": "2019-09-20",
+      "title": "Solid Gears Experience",
+      "content": "The Coalition has done a great job with Gears 5. The story is compelling, the graphics are stunning, and the gameplay feels familiar yet fresh. Horde mode is still incredibly fun.",
+      "verified": true,
+      "helpful": 167
+    },
+    {
+      "id": "rev-gears-003",
+      "userName": "XboxGamer2019",
+      "rating": 3,
+      "date": "2019-09-25",
+      "title": "Good but Not Great",
+      "content": "The campaign is solid and the multiplayer is fun, but the open-world sections feel unnecessary and slow down the pacing. Still a good game, just not the evolution I was hoping for.",
+      "verified": true,
+      "helpful": 89
+    },
+    {
+      "id": "rev-gears-004",
+      "userName": "GearsVeteran",
+      "rating": 4,
+      "date": "2019-10-01",
+      "title": "Excellent Campaign",
+      "content": "The story is the highlight here, with Kait's journey being particularly compelling. The semi-open world adds variety without losing the series' core identity. Multiplayer is as tight as ever.",
+      "verified": true,
+      "helpful": 145
+    },
+    {
+      "id": "rev-gears-005",
+      "userName": "SwarmHunter",
+      "rating": 4,
+      "date": "2019-10-05",
+      "title": "Worth the Wait",
+      "content": "Gears 5 delivers on all fronts. The campaign is emotional and well-paced, the graphics are beautiful, and the multiplayer offers plenty of variety. A great addition to the Gears franchise.",
+      "verified": true,
+      "helpful": 112
+    }
+  ],
+  "averageRating": 3.8,
+  "totalReviews": 5
+}

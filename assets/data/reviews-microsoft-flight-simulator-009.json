@@ -1,0 +1,57 @@
+{
+  "gameId": "xbox-microsoft-flight-simulator-009",
+  "reviews": [
+    {
+      "id": "rev-msfs-001",
+      "userName": "PilotPro",
+      "rating": 5,
+      "date": "2021-08-01",
+      "title": "Revolutionary Flight Sim",
+      "content": "Microsoft Flight Simulator is a technological marvel. The real-world mapping, weather systems, and aircraft physics are incredible. This is the most realistic flight simulator ever created.",
+      "verified": true,
+      "helpful": 456
+    },
+    {
+      "id": "rev-msfs-002",
+      "userName": "AviationFan",
+      "rating": 4,
+      "date": "2021-08-05",
+      "title": "Beautiful but Complex",
+      "content": "The graphics and world detail are stunning. Flying over familiar locations is magical. However, the learning curve is steep for newcomers, and the Xbox version has some performance limitations.",
+      "verified": true,
+      "helpful": 234
+    },
+    {
+      "id": "rev-msfs-003",
+      "userName": "XboxPilot",
+      "rating": 4,
+      "date": "2021-08-10",
+      "title": "Amazing on Xbox",
+      "content": "Incredible that this runs on Xbox Series X. The graphics are beautiful and the world is vast. Some frame rate drops in complex areas, but overall a fantastic experience for flight sim fans.",
+      "verified": true,
+      "helpful": 189
+    },
+    {
+      "id": "rev-msfs-004",
+      "userName": "FlightEnthusiast",
+      "rating": 5,
+      "date": "2021-08-15",
+      "title": "Dream Come True",
+      "content": "As a flight enthusiast, this is everything I've ever wanted. The ability to fly anywhere in the world with real weather and terrain is mind-blowing. The attention to detail is extraordinary.",
+      "verified": true,
+      "helpful": 345
+    },
+    {
+      "id": "rev-msfs-005",
+      "userName": "SimulatorGamer",
+      "rating": 4,
+      "date": "2021-08-20",
+      "title": "Technical Achievement",
+      "content": "The technical achievement here is incredible. Real-time weather, global mapping, and realistic flight physics. The game can be overwhelming for casual players, but it's perfect for simulation fans.",
+      "verified": true,
+      "helpful": 167
+    }
+  ],
+  "averageRating": 4.4,
+  "totalReviews": 5
+}

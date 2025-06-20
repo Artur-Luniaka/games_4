@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Catalog - GameVault Australia</title>
+    <meta
+      name="description"
+      content="Browse our collection of Xbox and PC games at GameVault Australia. Find your next gaming adventure."
+    />
+    <link rel="stylesheet" href="assets/styles/global-styles.css" />
+    <link rel="stylesheet" href="assets/styles/game-catalog-styles.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <main>
+      <section class="catalog-hero">
+        <div class="container">
+          <h1>Game Collection</h1>
+          <p>
+            Discover amazing Xbox and PC games from Australia's premier gaming
+            store
+          </p>
+        </div>
+      </section>
+
+      <section class="catalog-section">
+        <div class="container">
+          <div class="filter-container">
+            <button
+              class="filter-toggle"
+              id="filterToggle"
+              aria-expanded="false"
+            >
+              <span class="filter-icon">🔍</span>
+              Filter Games
+              <span class="toggle-arrow">▼</span>
+            </button>
+
+            <div class="filter-panel" id="filterPanel" aria-hidden="true">
+              <div class="filter-group">
+                <h3>Platform</h3>
+                <div class="filter-options">
+                  <label class="filter-option">
+                    <input type="checkbox" value="Xbox" checked />
+                    <span class="checkmark">Xbox</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" value="PC" checked />
+                    <span class="checkmark">PC</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="filter-actions">
+                <button class="btn btn-primary" id="applyFilters">
+                  Apply Filters
+                </button>
+                <button class="btn btn-outline" id="clearFilters">
+                  Clear All
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="games-grid" id="gamesGrid">
+            <!-- Game cards will be dynamically inserted here -->
+          </div>
+
+          <div class="no-results" id="noResults" style="display: none">
+            <div class="no-results-content">
+              <div class="no-results-icon">🎮</div>
+              <h3>No games found</h3>
+              <p>Try adjusting your filters to see more games</p>
+              <button class="btn btn-primary" id="resetFilters">
+                Reset Filters
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script
+      type="module"
+      src="assets/scripts/modules/header-injector.js"
+    ></script>
+    <script
+      type="module"
+      src="assets/scripts/modules/footer-injector.js"
+    ></script>
+    <script
+      type="module"
+      src="assets/scripts/modules/game-catalog-filter.js"
+    ></script>
+  </body>
+</html>

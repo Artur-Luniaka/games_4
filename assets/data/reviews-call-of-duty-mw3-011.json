@@ -1,0 +1,57 @@
+{
+  "gameId": "xbox-pc-call-of-duty-mw3-011",
+  "reviews": [
+    {
+      "id": "rev-mw3-001",
+      "userName": "CODVeteran",
+      "rating": 4,
+      "date": "2023-11-15",
+      "title": "Solid COD Experience",
+      "content": "Modern Warfare III delivers the expected Call of Duty experience. The campaign is short but action-packed, multiplayer is smooth, and the new Zombies mode is a welcome addition. Good but not revolutionary.",
+      "verified": true,
+      "helpful": 234
+    },
+    {
+      "id": "rev-mw3-002",
+      "userName": "FPSGamer",
+      "rating": 3,
+      "date": "2023-11-20",
+      "title": "More of the Same",
+      "content": "The game feels like an expansion pack rather than a full sequel. The campaign is underwhelming, and multiplayer maps are mostly remakes. Still fun to play, but lacks innovation.",
+      "verified": true,
+      "helpful": 189
+    },
+    {
+      "id": "rev-mw3-003",
+      "userName": "MultiplayerFan",
+      "rating": 4,
+      "date": "2023-11-25",
+      "title": "Great Multiplayer",
+      "content": "The multiplayer is where this game shines. The gunplay is excellent, maps are well-designed, and the progression system is satisfying. Campaign could be better, but multiplayer keeps me coming back.",
+      "verified": true,
+      "helpful": 167
+    },
+    {
+      "id": "rev-mw3-004",
+      "userName": "ZombiesPlayer",
+      "rating": 4,
+      "date": "2023-12-01",
+      "title": "Zombies Mode is Fun",
+      "content": "The new Zombies mode is a great addition. It combines the best of traditional Zombies with Warzone elements. The campaign is forgettable, but Zombies and multiplayer make this worth playing.",
+      "verified": true,
+      "helpful": 145
+    },
+    {
+      "id": "rev-mw3-005",
+      "userName": "CODEnthusiast",
+      "rating": 3,
+      "date": "2023-12-05",
+      "title": "Disappointing Campaign",
+      "content": "The campaign is the shortest and weakest in recent memory. Multiplayer is solid but feels recycled. At full price, this feels like a DLC rather than a full game. Wait for a sale.",
+      "verified": true,
+      "helpful": 98
+    }
+  ],
+  "averageRating": 3.6,
+  "totalReviews": 5
+}

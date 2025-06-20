@@ -1,0 +1,57 @@
+{
+  "gameId": "pc-elden-ring-004",
+  "reviews": [
+    {
+      "id": "rev-elden-001",
+      "userName": "TarnishedWarrior",
+      "rating": 5,
+      "date": "2022-03-01",
+      "title": "Game of the Year Material",
+      "content": "Elden Ring is a masterpiece. The open world is vast and mysterious, the combat is challenging but fair, and the lore is deep and fascinating. FromSoftware has created something truly special.",
+      "verified": true,
+      "helpful": 456
+    },
+    {
+      "id": "rev-elden-002",
+      "userName": "SoulsVeteran",
+      "rating": 5,
+      "date": "2022-03-05",
+      "title": "FromSoftware's Magnum Opus",
+      "content": "This is the culmination of everything FromSoftware has learned. The open world design is revolutionary, the boss fights are epic, and the sense of discovery is unmatched. A true masterpiece.",
+      "verified": true,
+      "helpful": 389
+    },
+    {
+      "id": "rev-elden-003",
+      "userName": "GraceSeeker",
+      "rating": 4,
+      "date": "2022-03-10",
+      "title": "Incredible but Challenging",
+      "content": "The world is beautiful and the gameplay is excellent. However, the difficulty curve can be brutal for newcomers. The open world sometimes feels overwhelming, but the rewards are worth it.",
+      "verified": true,
+      "helpful": 234
+    },
+    {
+      "id": "rev-elden-004",
+      "userName": "LandsBetweenExplorer",
+      "rating": 5,
+      "date": "2022-03-15",
+      "title": "Revolutionary Open World",
+      "content": "Elden Ring redefines what an open world can be. Every corner holds secrets, every boss is memorable, and the sense of progression is incredibly satisfying. This is gaming at its finest.",
+      "verified": true,
+      "helpful": 312
+    },
+    {
+      "id": "rev-elden-005",
+      "userName": "MiyazakiFan",
+      "rating": 4,
+      "date": "2022-03-20",
+      "title": "Almost Perfect",
+      "content": "The game is incredible, but some technical issues on PC and occasional frame rate drops mar the experience. The content and design are top-notch, making this a must-play despite the issues.",
+      "verified": true,
+      "helpful": 178
+    }
+  ],
+  "averageRating": 4.6,
+  "totalReviews": 5
+}

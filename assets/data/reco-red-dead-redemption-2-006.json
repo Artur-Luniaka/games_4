@@ -1,0 +1,37 @@
+{
+  "gameId": "pc-red-dead-redemption-2-006",
+  "recommendations": [
+    {
+      "id": "reco-rdr2-001",
+      "gameId": "pc-witcher-3-008",
+      "title": "The Witcher 3: Wild Hunt",
+      "cover": "assets/images/games/witcher-3.jpg",
+      "price": 49.99,
+      "reason": "Epic open-world RPG with rich storytelling and characters"
+    },
+    {
+      "id": "reco-rdr2-002",
+      "gameId": "pc-elden-ring-004",
+      "title": "Elden Ring",
+      "cover": "assets/images/games/elden-ring.jpg",
+      "price": 59.99,
+      "reason": "Vast open-world adventure with immersive exploration"
+    },
+    {
+      "id": "reco-rdr2-003",
+      "gameId": "pc-baldurs-gate-3-010",
+      "title": "Baldur's Gate 3",
+      "cover": "assets/images/games/baldurs-gate-3.jpg",
+      "price": 79.99,
+      "reason": "Story-driven RPG with deep character development"
+    },
+    {
+      "id": "reco-rdr2-004",
+      "gameId": "pc-cyberpunk-2077-002",
+      "title": "Cyberpunk 2077",
+      "cover": "assets/images/games/cyberpunk-2077.jpg",
+      "price": 74.5,
+      "reason": "Open-world action with compelling narrative"
+    }
+  ]
+}

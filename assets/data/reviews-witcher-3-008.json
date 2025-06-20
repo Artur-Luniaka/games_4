@@ -1,0 +1,57 @@
+{
+  "gameId": "pc-witcher-3-008",
+  "reviews": [
+    {
+      "id": "rev-witcher-001",
+      "userName": "GeraltFan",
+      "rating": 5,
+      "date": "2015-05-25",
+      "title": "RPG Masterpiece",
+      "content": "The Witcher 3 is the gold standard for RPGs. The story is compelling, the world is vast and beautiful, and the characters are unforgettable. CD Projekt Red has created something truly special.",
+      "verified": true,
+      "helpful": 789
+    },
+    {
+      "id": "rev-witcher-002",
+      "userName": "RPGEnthusiast",
+      "rating": 5,
+      "date": "2015-06-01",
+      "title": "Best RPG Ever Made",
+      "content": "This game redefined what an RPG could be. The quest design is brilliant, the choices matter, and the world feels alive. The DLC expansions are also exceptional, adding even more quality content.",
+      "verified": true,
+      "helpful": 654
+    },
+    {
+      "id": "rev-witcher-003",
+      "userName": "PCGamer2015",
+      "rating": 4,
+      "date": "2015-06-05",
+      "title": "Excellent with Minor Flaws",
+      "content": "The story and world are incredible, but the combat system could be more refined. The graphics are beautiful and the modding community has made this game even better over the years.",
+      "verified": true,
+      "helpful": 345
+    },
+    {
+      "id": "rev-witcher-004",
+      "userName": "CDProjektFan",
+      "rating": 5,
+      "date": "2015-06-10",
+      "title": "CD Projekt's Masterpiece",
+      "content": "This is what happens when a developer truly cares about their product. The attention to detail is staggering, the writing is superb, and the world is one of the most immersive ever created.",
+      "verified": true,
+      "helpful": 567
+    },
+    {
+      "id": "rev-witcher-005",
+      "userName": "WitcherVeteran",
+      "rating": 5,
+      "date": "2015-06-15",
+      "title": "Perfect Conclusion",
+      "content": "The perfect ending to Geralt's story. The main quest is epic, the side quests are meaningful, and the world is filled with interesting characters and stories. A true masterpiece.",
+      "verified": true,
+      "helpful": 423
+    }
+  ],
+  "averageRating": 4.8,
+  "totalReviews": 5
+}

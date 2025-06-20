@@ -1,0 +1,443 @@
+/* Shipping & Returns Styles - GameVault Australia */
+.shipping-hero {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  color: var(--neutral-100);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.shipping-hero h1 {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-100);
+}
+
+.shipping-hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+.shipping-content {
+  padding: var(--spacing-3xl) 0;
+  background: var(--neutral-100);
+}
+
+/* Overview Cards */
+.shipping-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.overview-card {
+  background: var(--neutral-100);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+}
+
+.overview-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-lg);
+  display: block;
+}
+
+.overview-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-900);
+}
+
+.overview-card p {
+  color: var(--neutral-700);
+  line-height: 1.6;
+}
+
+/* Shipping Details */
+.shipping-details {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shipping-section,
+.returns-section {
+  margin-bottom: var(--spacing-3xl);
+  background: var(--neutral-100);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-md);
+}
+
+.shipping-section h2,
+.returns-section h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--neutral-900);
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: var(--spacing-sm);
+  display: inline-block;
+}
+
+/* Shipping Options */
+.shipping-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.shipping-option {
+  background: var(--neutral-200);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--primary-color);
+  transition: all var(--transition-normal);
+}
+
+.shipping-option:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.shipping-option h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--neutral-900);
+}
+
+.option-details p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--neutral-700);
+}
+
+.option-details p:last-child {
+  margin-bottom: 0;
+}
+
+.option-details strong {
+  color: var(--neutral-900);
+}
+
+/* Delivery Map */
+.delivery-map {
+  margin-bottom: var(--spacing-xl);
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, var(--neutral-200), var(--neutral-300));
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--neutral-400);
+}
+
+.map-icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.6;
+}
+
+.map-text {
+  font-size: 1.125rem;
+  color: var(--neutral-600);
+  font-weight: 500;
+}
+
+/* States Grid */
+.delivery-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--neutral-900);
+}
+
+.states-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.state-item {
+  background: var(--neutral-200);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  text-align: center;
+  color: var(--neutral-700);
+  font-weight: 500;
+  border: 1px solid var(--neutral-300);
+}
+
+/* Returns Policy */
+.returns-policy {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.policy-card {
+  background: var(--neutral-200);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border-top: 4px solid var(--secondary-color);
+}
+
+.policy-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--neutral-900);
+}
+
+.policy-card ul,
+.policy-card ol {
+  color: var(--neutral-700);
+  line-height: 1.6;
+}
+
+.policy-card li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.policy-card li:last-child {
+  margin-bottom: 0;
+}
+
+/* Tracking Info */
+.tracking-info p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-lg);
+}
+
+.tracking-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.tracking-feature {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--neutral-200);
+  border-radius: var(--radius-md);
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Contact Section */
+.contact-section {
+  background: var(--neutral-200);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-900);
+  border-bottom: none;
+}
+
+.contact-section p {
+  font-size: 1.125rem;
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-xl);
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.contact-method {
+  background: var(--neutral-100);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.contact-method:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.method-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+  display: block;
+}
+
+.contact-method h4 {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--neutral-900);
+}
+
+.contact-method p {
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.95rem;
+}
+
+.contact-method p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .shipping-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .shipping-hero p {
+    font-size: 1.125rem;
+  }
+
+  .shipping-overview {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .shipping-section,
+  .returns-section {
+    padding: var(--spacing-xl);
+  }
+
+  .shipping-section h2,
+  .returns-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .shipping-options,
+  .returns-policy {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .states-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tracking-features {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-methods {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .shipping-hero h1 {
+    font-size: 2rem;
+  }
+
+  .shipping-hero p {
+    font-size: 1rem;
+  }
+
+  .shipping-content {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .shipping-section,
+  .returns-section {
+    padding: var(--spacing-lg);
+  }
+
+  .shipping-section h2,
+  .returns-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .overview-card,
+  .shipping-option,
+  .policy-card,
+  .contact-method {
+    padding: var(--spacing-md);
+  }
+
+  .overview-icon,
+  .method-icon {
+    font-size: 2rem;
+  }
+
+  .states-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-placeholder {
+    height: 200px;
+  }
+
+  .map-icon {
+    font-size: 3rem;
+  }
+}
+
+/* Accessibility */
+.overview-card:focus,
+.shipping-option:focus,
+.policy-card:focus,
+.contact-method:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .overview-card,
+  .shipping-section,
+  .returns-section,
+  .shipping-option,
+  .policy-card,
+  .contact-method {
+    border-width: 2px;
+  }
+
+  .map-placeholder {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .overview-card,
+  .shipping-option,
+  .contact-method {
+    transition: none;
+  }
+
+  .overview-card:hover,
+  .shipping-option:hover,
+  .contact-method:hover {
+    transform: none;
+  }
+}

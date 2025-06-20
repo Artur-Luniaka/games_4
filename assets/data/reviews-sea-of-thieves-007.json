@@ -1,0 +1,57 @@
+{
+  "gameId": "xbox-sea-of-thieves-007",
+  "reviews": [
+    {
+      "id": "rev-sea-001",
+      "userName": "PirateCaptain",
+      "rating": 4,
+      "date": "2018-04-01",
+      "title": "Unique Pirate Experience",
+      "content": "Sea of Thieves offers something truly unique in gaming. The cooperative pirate gameplay is unlike anything else. The beautiful art style and relaxing sailing make for a wonderful experience.",
+      "verified": true,
+      "helpful": 234
+    },
+    {
+      "id": "rev-sea-002",
+      "userName": "SailingMaster",
+      "rating": 3,
+      "date": "2018-04-05",
+      "title": "Good Foundation, Needs Content",
+      "content": "The core gameplay is solid and the sailing mechanics are excellent. However, the game launched with very little content. The regular updates have helped, but it still feels shallow at times.",
+      "verified": true,
+      "helpful": 167
+    },
+    {
+      "id": "rev-sea-003",
+      "userName": "XboxPirate",
+      "rating": 4,
+      "date": "2018-04-10",
+      "title": "Great with Friends",
+      "content": "This game is best played with friends. The cooperative sailing and treasure hunting is incredibly fun. The PvP encounters add excitement, though they can be frustrating for solo players.",
+      "verified": true,
+      "helpful": 189
+    },
+    {
+      "id": "rev-sea-004",
+      "userName": "RareFan",
+      "rating": 4,
+      "date": "2018-04-15",
+      "title": "Rare's Comeback",
+      "content": "Rare has created something special here. The art style is charming, the water physics are incredible, and the emergent gameplay creates memorable moments. A great return to form for Rare.",
+      "verified": true,
+      "helpful": 145
+    },
+    {
+      "id": "rev-sea-005",
+      "userName": "OceanExplorer",
+      "rating": 3,
+      "date": "2018-04-20",
+      "title": "Beautiful but Repetitive",
+      "content": "The world is stunning and the sailing is relaxing, but the activities become repetitive quickly. The game needs more variety in quests and activities to maintain long-term engagement.",
+      "verified": true,
+      "helpful": 98
+    }
+  ],
+  "averageRating": 3.6,
+  "totalReviews": 5
+}

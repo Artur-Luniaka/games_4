@@ -1,0 +1,335 @@
+[
+  {
+    "id": "xbox-halo-infinite-001",
+    "title": "Halo Infinite",
+    "cover": "assets/images/games/halo-infinite.jpg",
+    "platform": ["Xbox"],
+    "price": 89.99,
+    "rating": 4.5,
+    "releaseDate": "2021-12-08",
+    "developer": "343 Industries",
+    "publisher": "Xbox Game Studios",
+    "description": "The legendary Halo series returns with the most expansive Master Chief campaign yet and a groundbreaking free-to-play multiplayer experience.",
+    "features": [
+      "Campaign",
+      "Multiplayer",
+      "Battle Royale",
+      "4K Graphics",
+      "HDR Support"
+    ],
+    "inStock": true,
+    "systemRequirements": {
+      "minimum": "Windows 10 64-bit, AMD Ryzen 5 1600 or Intel i5-4440, 8GB RAM, AMD RX 570 or NVIDIA GTX 1050 Ti",
+      "recommended": "Windows 10 64-bit, AMD Ryzen 7 3700X or Intel i7-9700k, 16GB RAM, AMD RX 5700 XT or NVIDIA RTX 2070"
+    },
+    "gallery": [
+      "assets/images/games/halo-infinite-1.jpg",
+      "assets/images/games/halo-infinite-2.jpg",
+      "assets/images/games/halo-infinite-3.jpg"
+    ]
+  },
+  {
+    "id": "pc-cyberpunk-2077-002",
+    "title": "Cyberpunk 2077",
+    "cover": "assets/images/games/cyberpunk-2077.jpg",
+    "platform": ["PC"],
+    "price": 74.5,
+    "rating": 4.2,
+    "releaseDate": "2020-12-10",
+    "developer": "CD Projekt Red",
+    "publisher": "CD Projekt",
+    "description": "An open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification.",
+    "features": [
+      "Open World",
+      "RPG",
+      "Cyberpunk Setting",
+      "Ray Tracing",
+      "Mod Support"
+    ],
+    "inStock": true,
+    "systemRequirements": {
+      "minimum": "Windows 10 64-bit, Intel Core i5-3570K or AMD FX-8310, 8GB RAM, NVIDIA GeForce GTX 970 or AMD Radeon RX 470",
+      "recommended": "Windows 10 64-bit, Intel Core i7-4790 or AMD Ryzen 3 3200G, 12GB RAM, NVIDIA GeForce GTX 1060 or AMD Radeon RX 590"
+    },
+    "gallery": [
+      "assets/images/games/cyberpunk-2077-1.jpg",
+      "assets/images/games/cyberpunk-2077-2.jpg",
+      "assets/images/games/cyberpunk-2077-3.jpg"
+    ]
+  },
+  {
+    "id": "xbox-pc-forza-horizon-5-003",
+    "title": "Forza Horizon 5",
+    "cover": "assets/images/games/forza-horizon-5.jpg",
+    "platform": ["Xbox", "PC"],
+    "price": 69.0,
+    "rating": 4.8,
+    "releaseDate": "2021-11-09",
+    "developer": "Playground Games",
+    "publisher": "Xbox Game Studios",
+    "description": "Your Ultimate Horizon Adventure awaits! Explore the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action.",
+    "features": [
+      "Racing",
+      "Open World",
+      "Multiplayer",
+      "4K Graphics",
+      "HDR Support"
+    ],
+    "inStock": true,
+    "systemRequirements": {
+      "minimum": "Windows 10 64-bit, AMD Ryzen 3 1200 or Intel i5-4460, 8GB RAM, AMD RX 470 or NVIDIA GTX 970",
+      "recommended": "Windows 10 64-bit, AMD Ryzen 5 1500X or Intel i5-8400, 16GB RAM, AMD RX 590 or NVIDIA GTX 1070"
+    },
+    "gallery": [
+      "assets/images/games/forza-horizon-5-1.jpg",
+      "assets/images/games/forza-horizon-5-2.jpg",
+      "assets/images/games/forza-horizon-5-3.jpg"
+    ]
+  },
+  {
+    "id": "pc-elden-ring-004",
+    "title": "Elden Ring",
+    "cover": "assets/images/games/elden-ring.jpg",
+    "platform": ["PC"],
+    "price": 59.99,
+    "rating": 4.9,
+    "releaseDate": "2022-02-25",
+    "developer": "FromSoftware",
+    "publisher": "Bandai Namco Entertainment",
+    "description": "Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+    "features": [
+      "Action RPG",
+      "Open World",
+      "Multiplayer",
+      "Challenging Combat",
+      "Dark Fantasy"
+    ],
+    "inStock": true,
+    "systemRequirements": {
+      "minimum": "Windows 10 64-bit, Intel Core i5-8400 or AMD Ryzen 3 3300X, 12GB RAM, NVIDIA GeForce GTX 1060 or AMD Radeon RX 580",
+      "recommended": "Windows 10 64-bit, Intel Core i7-8700K or AMD Ryzen 5 3600X, 16GB RAM, NVIDIA GeForce GTX 1070 or AMD Radeon RX VEGA 56"
+    },
+    "gallery": [
+      "assets/images/games/elden-ring-1.jpg",
+      "assets/images/games/elden-ring-2.jpg",
+      "assets/images/games/elden-ring-3.jpg"
+    ]
+  },
+  {
+    "id": "xbox-gears-5-005",
+    "title": "Gears 5",
+    "cover": "assets/images/games/gears-5.jpg",
+    "platform": ["Xbox"],
+    "price": 79.99,
+    "rating": 4.3,
+    "releaseDate": "2019-09-10",
+    "developer": "The Coalition",
+    "publisher": "Xbox Game Studios",
+    "description": "From one of gaming's most acclaimed sagas, Gears 5 delivers the biggest, most dramatic Gears of War campaign ever.",
+    "features": [
+      "Third-Person Shooter",
+      "Campaign",
+      "Multiplayer",
+      "Horde Mode",
+      "4K Graphics"
+    ],
+    "inStock": true,
+    "systemRequirements": null,
+    "gallery": [
+      "assets/images/games/gears-5-1.jpg",
+      "assets/images/games/gears-5-2.jpg",
+      "assets/images/games/gears-5-3.jpg"
+    ]
+  },
+  {
+    "id": "pc-red-dead-redemption-2-006",
+    "title": "Red Dead Redemption 2",
+    "cover": "assets/images/games/red-dead-redemption-2.jpg",
+    "platform": ["PC"],
+    "price": 84.99,
+    "rating": 4.7,
+    "releaseDate": "2019-12-05",
+    "developer": "Rockstar Games",
+    "publisher": "Rockstar Games",
+    "description": "America, 1899. The end of the wild west era has begun. After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee.",
+    "features": [
+      "Open World",
+      "Western",
+      "Story-Driven",
+      "Multiplayer",
+      "Mod Support"
+    ],
+    "inStock": true,
+    "systemRequirements": {
+      "minimum": "Windows 10 64-bit, Intel Core i5-2500K or AMD FX-6300, 8GB RAM, NVIDIA GeForce GTX 770 or AMD Radeon R9 280",
+      "recommended": "Windows 10 64-bit, Intel Core i7-4770K or AMD Ryzen 5 1500X, 12GB RAM, NVIDIA GeForce GTX 1060 or AMD Radeon RX 480"
+    },
+    "gallery": [
+      "assets/images/games/red-dead-redemption-2-1.jpg",
+      "assets/images/games/red-dead-redemption-2-2.jpg",
+      "assets/images/games/red-dead-redemption-2-3.jpg"
+    ]
+  },
+  {
+    "id": "xbox-sea-of-thieves-007",
+    "title": "Sea of Thieves",
+    "cover": "assets/images/games/sea-of-thieves.jpg",
+    "platform": ["Xbox"],
+    "price": 69.99,
+    "rating": 4.1,
+    "releaseDate": "2018-03-20",
+    "developer": "Rare",
+    "publisher": "Xbox Game Studios",
+    "description": "Sea of Thieves offers the essential pirate experience, from sailing and fighting to exploring and looting - everything you need to live the pirate life.",
+    "features": [
+      "Multiplayer",
+      "Pirate Adventure",
+      "Open World",
+      "Co-op",
+      "Regular Updates"
+    ],
+    "inStock": true,
+    "systemRequirements": null,
+    "gallery": [
+      "assets/images/games/sea-of-thieves-1.jpg",
+      "assets/images/games/sea-of-thieves-2.jpg",
+      "assets/images/games/sea-of-thieves-3.jpg"
+    ]
+  },
+  {
+    "id": "pc-witcher-3-008",
+    "title": "The Witcher 3: Wild Hunt",
+    "cover": "assets/images/games/witcher-3.jpg",
+    "platform": ["PC"],
+    "price": 49.99,
+    "rating": 4.8,
+    "releaseDate": "2015-05-19",
+    "developer": "CD Projekt Red",
+    "publisher": "CD Projekt",
+    "description": "You are Geralt of Rivia, mercenary monster slayer. Before you stands a war-torn, monster-infested continent you can explore at will.",
+    "features": [
+      "RPG",
+      "Open World",
+      "Story-Driven",
+      "Mod Support",
+      "Next-Gen Update"
+    ],
+    "inStock": true,
+    "systemRequirements": {
+      "minimum": "Windows 10 64-bit, Intel Core i5-2500K or AMD Phenom II X4 940, 6GB RAM, NVIDIA GeForce GTX 660 or AMD Radeon HD 7870",
+      "recommended": "Windows 10 64-bit, Intel Core i7-3770 or AMD FX-8350, 8GB RAM, NVIDIA GeForce GTX 1060 or AMD Radeon RX 580"
+    },
+    "gallery": [
+      "assets/images/games/witcher-3-1.jpg",
+      "assets/images/games/witcher-3-2.jpg",
+      "assets/images/games/witcher-3-3.jpg"
+    ]
+  },
+  {
+    "id": "xbox-microsoft-flight-simulator-009",
+    "title": "Microsoft Flight Simulator",
+    "cover": "assets/images/games/microsoft-flight-simulator.jpg",
+    "platform": ["Xbox"],
+    "price": 89.99,
+    "rating": 4.4,
+    "releaseDate": "2021-07-27",
+    "developer": "Asobo Studio",
+    "publisher": "Xbox Game Studios",
+    "description": "From light planes to wide-body jets, fly highly detailed and accurate aircraft in an incredibly realistic world.",
+    "features": [
+      "Flight Simulator",
+      "Realistic Graphics",
+      "Global Map",
+      "Multiplayer",
+      "VR Support"
+    ],
+    "inStock": true,
+    "systemRequirements": null,
+    "gallery": [
+      "assets/images/games/microsoft-flight-simulator-1.jpg",
+      "assets/images/games/microsoft-flight-simulator-2.jpg",
+      "assets/images/games/microsoft-flight-simulator-3.jpg"
+    ]
+  },
+  {
+    "id": "pc-baldurs-gate-3-010",
+    "title": "Baldur's Gate 3",
+    "cover": "assets/images/games/baldurs-gate-3.jpg",
+    "platform": ["PC"],
+    "price": 79.99,
+    "rating": 4.9,
+    "releaseDate": "2023-08-03",
+    "developer": "Larian Studios",
+    "publisher": "Larian Studios",
+    "description": "Gather your party, and return to the Forgotten Realms in a tale of fellowship and betrayal, sacrifice and survival, and the lure of absolute power.",
+    "features": [
+      "RPG",
+      "Turn-Based Combat",
+      "Co-op",
+      "Story-Driven",
+      "D&D Setting"
+    ],
+    "inStock": true,
+    "systemRequirements": {
+      "minimum": "Windows 10 64-bit, Intel Core i5-4690 or AMD FX 8350, 8GB RAM, NVIDIA GeForce GTX 970 or AMD Radeon RX 480",
+      "recommended": "Windows 10 64-bit, Intel Core i7-8700K or AMD Ryzen 5 3600, 16GB RAM, NVIDIA GeForce RTX 2060 Super or AMD RX 5700 XT"
+    },
+    "gallery": [
+      "assets/images/games/baldurs-gate-3-1.jpg",
+      "assets/images/games/baldurs-gate-3-2.jpg",
+      "assets/images/games/baldurs-gate-3-3.jpg"
+    ]
+  },
+  {
+    "id": "xbox-pc-call-of-duty-mw3-011",
+    "title": "Call of Duty: Modern Warfare III",
+    "cover": "assets/images/games/call-of-duty-mw3.jpg",
+    "platform": ["Xbox", "PC"],
+    "price": 94.99,
+    "rating": 4.0,
+    "releaseDate": "2023-11-10",
+    "developer": "Sledgehammer Games",
+    "publisher": "Activision",
+    "description": "The most advanced Call of Duty ever created. Modern Warfare III brings the cinematic, immersive experience to the next level.",
+    "features": ["FPS", "Multiplayer", "Campaign", "Zombies", "Battle Pass"],
+    "inStock": true,
+    "systemRequirements": {
+      "minimum": "Windows 10 64-bit, Intel Core i5-6600 or AMD Ryzen 5 1600, 8GB RAM, NVIDIA GeForce GTX 1060 or AMD Radeon RX 580",
+      "recommended": "Windows 10 64-bit, Intel Core i7-8700K or AMD Ryzen 7 2700X, 16GB RAM, NVIDIA GeForce RTX 3060 or AMD Radeon RX 6600 XT"
+    },
+    "gallery": [
+      "assets/images/games/call-of-duty-mw3-1.jpg",
+      "assets/images/games/call-of-duty-mw3-2.jpg",
+      "assets/images/games/call-of-duty-mw3-3.jpg"
+    ]
+  },
+  {
+    "id": "xbox-pc-fifa-24-012",
+    "title": "EA FC 24",
+    "cover": "assets/images/games/fifa-24.jpg",
+    "platform": ["Xbox", "PC"],
+    "price": 89.99,
+    "rating": 4.2,
+    "releaseDate": "2023-09-29",
+    "developer": "EA Sports",
+    "publisher": "Electronic Arts",
+    "description": "Experience the beautiful game like never before with EA SPORTS FC 24. Powered by Football, built by EA SPORTS.",
+    "features": [
+      "Sports",
+      "Football",
+      "Ultimate Team",
+      "Career Mode",
+      "Multiplayer"
+    ],
+    "inStock": true,
+    "systemRequirements": {
+      "minimum": "Windows 10 64-bit, Intel Core i5-6600K or AMD Ryzen 5 1600, 8GB RAM, NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 570",
+      "recommended": "Windows 10 64-bit, Intel Core i7-8700 or AMD Ryzen 7 2700X, 12GB RAM, NVIDIA GeForce GTX 1660 or AMD Radeon RX 590"
+    },
+    "gallery": [
+      "assets/images/games/fifa-24-1.jpg",
+      "assets/images/games/fifa-24-2.jpg",
+      "assets/images/games/fifa-24-3.jpg"
+    ]
+  }
+]

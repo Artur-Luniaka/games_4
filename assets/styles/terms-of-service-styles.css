@@ -1,0 +1,289 @@
+/* Terms of Service Styles - GameVault Australia */
+.terms-hero {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  color: var(--neutral-100);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.terms-hero h1 {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-100);
+}
+
+.terms-hero p {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+.terms-content {
+  padding: var(--spacing-3xl) 0;
+  background: var(--neutral-100);
+}
+
+.terms-content .container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+/* Navigation */
+.terms-navigation {
+  position: sticky;
+  top: var(--spacing-lg);
+}
+
+.terms-nav {
+  background: var(--neutral-100);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.nav-link {
+  display: block;
+  padding: var(--spacing-md);
+  color: var(--neutral-700);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  font-weight: 500;
+  border-left: 3px solid transparent;
+}
+
+.nav-link:hover {
+  background: rgba(230, 126, 34, 0.1);
+  color: var(--primary-color);
+  border-left-color: var(--primary-color);
+}
+
+.nav-link.active {
+  background: var(--primary-color);
+  color: var(--neutral-100);
+  border-left-color: var(--primary-color);
+}
+
+/* Content Sections */
+.terms-sections {
+  background: var(--neutral-100);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-md);
+}
+
+.terms-section {
+  margin-bottom: var(--spacing-3xl);
+  scroll-margin-top: var(--spacing-lg);
+}
+
+.terms-section:last-child {
+  margin-bottom: 0;
+}
+
+.terms-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--neutral-900);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: var(--spacing-sm);
+  display: inline-block;
+}
+
+.terms-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-md);
+}
+
+.terms-section p:last-child {
+  margin-bottom: 0;
+}
+
+.terms-list {
+  margin: var(--spacing-lg) 0;
+  padding-left: var(--spacing-xl);
+}
+
+.terms-list li {
+  margin-bottom: var(--spacing-sm);
+  color: var(--neutral-700);
+  line-height: 1.6;
+}
+
+.terms-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Contact Section */
+.terms-contact {
+  background: var(--neutral-200);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  margin-top: var(--spacing-2xl);
+}
+
+.terms-contact h2 {
+  border-bottom: none;
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-info {
+  background: var(--neutral-100);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-md);
+}
+
+.contact-info p {
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.95rem;
+}
+
+.contact-info p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-info strong {
+  color: var(--neutral-900);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .terms-content .container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .terms-navigation {
+    position: static;
+  }
+
+  .terms-nav {
+    display: flex;
+    overflow-x: auto;
+    padding: var(--spacing-md);
+    gap: var(--spacing-sm);
+  }
+
+  .nav-link {
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--primary-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .terms-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .terms-hero p {
+    font-size: 1rem;
+  }
+
+  .terms-sections {
+    padding: var(--spacing-xl);
+  }
+
+  .terms-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .terms-section p {
+    font-size: 0.95rem;
+  }
+
+  .terms-list {
+    padding-left: var(--spacing-lg);
+  }
+
+  .terms-contact {
+    padding: var(--spacing-lg);
+  }
+
+  .contact-info {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-hero h1 {
+    font-size: 2rem;
+  }
+
+  .terms-content {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .terms-sections {
+    padding: var(--spacing-lg);
+  }
+
+  .terms-section {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .terms-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .terms-nav {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .nav-link {
+    text-align: center;
+    border-bottom: none;
+    border-left: 3px solid transparent;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    border-bottom-color: transparent;
+    border-left-color: var(--primary-color);
+  }
+}
+
+/* Accessibility */
+.nav-link:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .terms-nav,
+  .terms-sections,
+  .terms-contact {
+    border-width: 2px;
+  }
+
+  .nav-link {
+    border-width: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .nav-link {
+    transition: none;
+  }
+}

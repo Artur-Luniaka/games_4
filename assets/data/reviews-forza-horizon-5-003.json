@@ -1,0 +1,57 @@
+{
+  "gameId": "xbox-pc-forza-horizon-5-003",
+  "reviews": [
+    {
+      "id": "rev-forza-001",
+      "userName": "SpeedDemon",
+      "rating": 5,
+      "date": "2021-11-15",
+      "title": "Racing Perfection",
+      "content": "Forza Horizon 5 is the best racing game ever made. Mexico is stunning, the car selection is incredible, and the gameplay is smooth as silk. The seasonal events keep me coming back every week.",
+      "verified": true,
+      "helpful": 298
+    },
+    {
+      "id": "rev-forza-002",
+      "userName": "CarEnthusiast",
+      "rating": 5,
+      "date": "2021-11-20",
+      "title": "Visual Masterpiece",
+      "content": "The graphics are absolutely mind-blowing. Every car looks photorealistic, and the Mexican landscape is breathtaking. The sound design is also incredible - each car sounds unique and authentic.",
+      "verified": true,
+      "helpful": 187
+    },
+    {
+      "id": "rev-forza-003",
+      "userName": "RacingFan2021",
+      "rating": 4,
+      "date": "2021-12-01",
+      "title": "Excellent Racing Game",
+      "content": "Great open-world racing with tons of content. The seasonal challenges are fun and the multiplayer is smooth. Some minor bugs with online features, but nothing that ruins the experience.",
+      "verified": true,
+      "helpful": 134
+    },
+    {
+      "id": "rev-forza-004",
+      "userName": "HorizonVeteran",
+      "rating": 4,
+      "date": "2021-11-25",
+      "title": "Another Great Horizon",
+      "content": "Playground Games continues to deliver. Mexico is a fantastic setting with diverse biomes. The car customization is deep and the progression system is well-balanced. Highly recommended for racing fans.",
+      "verified": true,
+      "helpful": 89
+    },
+    {
+      "id": "rev-forza-005",
+      "userName": "XboxRacer",
+      "rating": 5,
+      "date": "2021-12-05",
+      "title": "Best in the Series",
+      "content": "This is the definitive Forza Horizon experience. The world is massive, the cars are beautiful, and the gameplay is addictive. The seasonal events and challenges provide endless entertainment.",
+      "verified": true,
+      "helpful": 245
+    }
+  ],
+  "averageRating": 4.6,
+  "totalReviews": 5
+}

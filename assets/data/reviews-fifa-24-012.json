@@ -1,0 +1,57 @@
+{
+  "gameId": "xbox-pc-fifa-24-012",
+  "reviews": [
+    {
+      "id": "rev-fifa-001",
+      "userName": "FootballFan",
+      "rating": 4,
+      "date": "2023-10-05",
+      "title": "Solid Football Game",
+      "content": "EA FC 24 is a good football game with improved graphics and gameplay mechanics. The new HyperMotion technology makes animations more realistic. Ultimate Team is still addictive, though microtransactions are aggressive.",
+      "verified": true,
+      "helpful": 234
+    },
+    {
+      "id": "rev-fifa-002",
+      "userName": "UltimateTeamPlayer",
+      "rating": 3,
+      "date": "2023-10-10",
+      "title": "Same Old FIFA",
+      "content": "The game feels very similar to previous years. Career Mode has some improvements, but Ultimate Team is still the main focus and it's becoming more pay-to-win. Good gameplay but lacks innovation.",
+      "verified": true,
+      "helpful": 189
+    },
+    {
+      "id": "rev-fifa-003",
+      "userName": "CareerModeFan",
+      "rating": 4,
+      "date": "2023-10-15",
+      "title": "Better Career Mode",
+      "content": "Career Mode has received some nice improvements with better player development and more realistic transfers. The gameplay is smooth and the graphics are excellent. Worth playing for career mode fans.",
+      "verified": true,
+      "helpful": 167
+    },
+    {
+      "id": "rev-fifa-004",
+      "userName": "ProClubsPlayer",
+      "rating": 3,
+      "date": "2023-10-20",
+      "title": "Pro Clubs Neglected",
+      "content": "Pro Clubs mode has been largely ignored again. The gameplay is good, but the lack of new features for Pro Clubs is disappointing. Ultimate Team gets all the attention while other modes suffer.",
+      "verified": true,
+      "helpful": 145
+    },
+    {
+      "id": "rev-fifa-005",
+      "userName": "SoccerGamer",
+      "rating": 4,
+      "date": "2023-10-25",
+      "title": "Good but Expensive",
+      "content": "The game plays well and looks great, but the full price tag for what feels like an update is hard to justify. The new features are welcome, but EA needs to do more to justify the annual release cycle.",
+      "verified": true,
+      "helpful": 123
+    }
+  ],
+  "averageRating": 3.6,
+  "totalReviews": 5
+}

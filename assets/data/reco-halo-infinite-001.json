@@ -1,0 +1,37 @@
+{
+  "gameId": "xbox-halo-infinite-001",
+  "recommendations": [
+    {
+      "id": "reco-halo-001",
+      "gameId": "xbox-gears-5-005",
+      "title": "Gears 5",
+      "cover": "assets/images/games/gears-5.jpg",
+      "price": 79.99,
+      "reason": "Similar sci-fi shooter with epic campaign and multiplayer"
+    },
+    {
+      "id": "reco-halo-002",
+      "gameId": "xbox-pc-call-of-duty-mw3-011",
+      "title": "Call of Duty: Modern Warfare III",
+      "cover": "assets/images/games/call-of-duty-mw3.jpg",
+      "price": 94.99,
+      "reason": "Fast-paced FPS with competitive multiplayer"
+    },
+    {
+      "id": "reco-halo-003",
+      "gameId": "pc-cyberpunk-2077-002",
+      "title": "Cyberpunk 2077",
+      "cover": "assets/images/games/cyberpunk-2077.jpg",
+      "price": 74.5,
+      "reason": "Futuristic setting with action-packed gameplay"
+    },
+    {
+      "id": "reco-halo-004",
+      "gameId": "pc-elden-ring-004",
+      "title": "Elden Ring",
+      "cover": "assets/images/games/elden-ring.jpg",
+      "price": 59.99,
+      "reason": "Epic fantasy adventure with challenging combat"
+    }
+  ]
+}

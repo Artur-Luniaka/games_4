@@ -1,0 +1,57 @@
+{
+  "gameId": "xbox-halo-infinite-001",
+  "reviews": [
+    {
+      "id": "rev-halo-001",
+      "userName": "MasterChief117",
+      "rating": 5,
+      "date": "2021-12-15",
+      "title": "Infinite Possibilities",
+      "content": "Halo Infinite brings back the classic Halo feel while modernizing the experience. The campaign is epic, and the multiplayer is incredibly fun. The grappling hook adds a whole new dimension to combat.",
+      "verified": true,
+      "helpful": 127
+    },
+    {
+      "id": "rev-halo-002",
+      "userName": "SpartanWarrior",
+      "rating": 4,
+      "date": "2021-12-20",
+      "title": "Great Return to Form",
+      "content": "343 Industries finally got it right. The open-world campaign is fantastic, though some missions feel repetitive. Multiplayer is solid but needs more maps. Overall, a worthy successor to the Halo legacy.",
+      "verified": true,
+      "helpful": 89
+    },
+    {
+      "id": "rev-halo-003",
+      "userName": "CortanaFan",
+      "rating": 4,
+      "date": "2022-01-05",
+      "title": "Solid Halo Experience",
+      "content": "The story is engaging and the graphics are beautiful. The new equipment system adds tactical depth. Some technical issues at launch, but most have been resolved with updates.",
+      "verified": true,
+      "helpful": 56
+    },
+    {
+      "id": "rev-halo-004",
+      "userName": "XboxGamer2021",
+      "rating": 3,
+      "date": "2021-12-25",
+      "title": "Good but Incomplete",
+      "content": "The core gameplay is excellent, but the game feels unfinished. Missing features like co-op campaign at launch was disappointing. The battle pass progression is too slow.",
+      "verified": true,
+      "helpful": 42
+    },
+    {
+      "id": "rev-halo-005",
+      "userName": "HaloVeteran",
+      "rating": 5,
+      "date": "2022-01-10",
+      "title": "Masterpiece",
+      "content": "This is the Halo game I've been waiting for. The campaign is emotional and epic, the multiplayer is balanced and fun. The art style is perfect - modern but respectful to the original trilogy.",
+      "verified": true,
+      "helpful": 203
+    }
+  ],
+  "averageRating": 4.2,
+  "totalReviews": 5
+}

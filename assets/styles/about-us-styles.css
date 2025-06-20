@@ -1,0 +1,421 @@
+/* About Us Styles - GameVault Australia */
+.about-hero {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  color: var(--neutral-100);
+  padding: var(--spacing-4xl) 0;
+  text-align: center;
+}
+
+.about-hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--neutral-100);
+  line-height: 1.2;
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-bottom: var(--spacing-2xl);
+  font-weight: 300;
+}
+
+.about-stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-3xl);
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--neutral-100);
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Story Section */
+.about-story {
+  padding: var(--spacing-4xl) 0;
+  background: var(--neutral-100);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.story-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--neutral-900);
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: var(--spacing-sm);
+  display: inline-block;
+}
+
+.story-content p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-lg);
+}
+
+.story-content p:last-child {
+  margin-bottom: 0;
+}
+
+.story-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 400px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--neutral-200), var(--neutral-300));
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--neutral-400);
+}
+
+.placeholder-icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.6;
+}
+
+.placeholder-text {
+  font-size: 1.125rem;
+  color: var(--neutral-600);
+  font-weight: 500;
+}
+
+/* Mission Section */
+.about-mission {
+  padding: var(--spacing-4xl) 0;
+  background: var(--neutral-200);
+}
+
+.mission-content h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-3xl);
+  color: var(--neutral-900);
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-2xl);
+}
+
+.mission-item {
+  background: var(--neutral-100);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  border: 1px solid var(--neutral-300);
+}
+
+.mission-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+}
+
+.mission-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-lg);
+  display: block;
+}
+
+.mission-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-900);
+}
+
+.mission-item p {
+  color: var(--neutral-700);
+  line-height: 1.6;
+}
+
+/* Team Section */
+.about-team {
+  padding: var(--spacing-4xl) 0;
+  background: var(--neutral-100);
+}
+
+.about-team h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-3xl);
+  color: var(--neutral-900);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-2xl);
+}
+
+.team-member {
+  background: var(--neutral-100);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--neutral-300);
+  transition: all var(--transition-normal);
+}
+
+.team-member:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.member-avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto var(--spacing-lg);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-placeholder {
+  font-size: 3rem;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--neutral-900);
+}
+
+.member-role {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
+}
+
+.member-bio {
+  color: var(--neutral-700);
+  line-height: 1.6;
+}
+
+/* Values Section */
+.about-values {
+  padding: var(--spacing-4xl) 0;
+  background: var(--neutral-200);
+}
+
+.about-values h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-3xl);
+  color: var(--neutral-900);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-2xl);
+}
+
+.value-item {
+  background: var(--neutral-100);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--primary-color);
+  transition: all var(--transition-normal);
+}
+
+.value-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.value-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-900);
+}
+
+.value-item p {
+  color: var(--neutral-700);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .image-placeholder {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .about-stats {
+    gap: var(--spacing-lg);
+  }
+
+  .stat-item {
+    padding: var(--spacing-md);
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .story-content h2,
+  .mission-content h2,
+  .about-team h2,
+  .about-values h2 {
+    font-size: 2rem;
+  }
+
+  .mission-grid,
+  .team-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .mission-item,
+  .team-member,
+  .value-item {
+    padding: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .about-stats {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .stat-item {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .story-content h2,
+  .mission-content h2,
+  .about-team h2,
+  .about-values h2 {
+    font-size: 1.75rem;
+  }
+
+  .story-content p {
+    font-size: 1rem;
+  }
+
+  .member-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar-placeholder {
+    font-size: 2.5rem;
+  }
+}
+
+/* Accessibility */
+.mission-item:focus,
+.team-member:focus,
+.value-item:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .mission-item,
+  .team-member,
+  .value-item {
+    border-width: 2px;
+  }
+
+  .image-placeholder {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .mission-item,
+  .team-member,
+  .value-item {
+    transition: none;
+  }
+
+  .mission-item:hover,
+  .team-member:hover,
+  .value-item:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameVault Australia - Premium Xbox & PC Games</title>
+    <meta
+      name="description"
+      content="Discover the latest Xbox and PC games at GameVault Australia. Premium gaming experience with exclusive titles and competitive prices."
+    />
+    <link rel="stylesheet" href="assets/styles/global-styles.css" />
+    <link rel="stylesheet" href="assets/styles/hero-gallery.css" />
+    <link rel="stylesheet" href="assets/styles/featured-sections.css" />
+    <link rel="stylesheet" href="assets/styles/contact-form.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <main>
+      <!-- Hero Gallery Section -->
+      <section class="hero-gallery" aria-label="Featured games gallery">
+        <div class="gallery-container">
+          <div class="gallery-slide active" data-slide="1">
+            <img
+              src="assets/images/hero/gaming-setup-1.jpg"
+              alt="Premium gaming setup with Xbox Series X"
+              loading="lazy"
+            />
+            <div class="slide-content">
+              <h1 class="slide-title">Unleash Your Gaming Potential</h1>
+              <p class="slide-subtitle">
+                Experience next-gen gaming with Xbox Series X
+              </p>
+            </div>
+          </div>
+          <div class="gallery-slide" data-slide="2">
+            <img
+              src="assets/images/hero/pc-gaming-2.jpg"
+              alt="High-end PC gaming station"
+              loading="lazy"
+            />
+            <div class="slide-content">
+              <h1 class="slide-title">Master the Digital Realm</h1>
+              <p class="slide-subtitle">
+                Ultimate PC gaming performance awaits
+              </p>
+            </div>
+          </div>
+          <div class="gallery-slide" data-slide="3">
+            <img
+              src="assets/images/hero/competitive-gaming-3.jpg"
+              alt="Competitive gaming tournament setup"
+              loading="lazy"
+            />
+            <div class="slide-content">
+              <h1 class="slide-title">Compete Like a Champion</h1>
+              <p class="slide-subtitle">
+                Join the elite with competitive gaming gear
+              </p>
+            </div>
+          </div>
+          <div class="gallery-slide" data-slide="4">
+            <img
+              src="assets/images/hero/immersive-gaming-4.jpg"
+              alt="Immersive gaming experience"
+              loading="lazy"
+            />
+            <div class="slide-content">
+              <h1 class="slide-title">Dive Into Immersion</h1>
+              <p class="slide-subtitle">
+                Lose yourself in breathtaking virtual worlds
+              </p>
+            </div>
+          </div>
+          <div class="gallery-slide" data-slide="5">
+            <img
+              src="assets/images/hero/gaming-community-5.jpg"
+              alt="Gaming community celebration"
+              loading="lazy"
+            />
+            <div class="slide-content">
+              <h1 class="slide-title">Join the Community</h1>
+              <p class="slide-subtitle">Connect with fellow gamers worldwide</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="gallery-nav prev-slide" aria-label="Previous slide">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <button class="gallery-nav next-slide" aria-label="Next slide">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+
+        <div class="gallery-indicators">
+          <button
+            class="indicator active"
+            data-slide="1"
+            aria-label="Go to slide 1"
+          ></button>
+          <button
+            class="indicator"
+            data-slide="2"
+            aria-label="Go to slide 2"
+          ></button>
+          <button
+            class="indicator"
+            data-slide="3"
+            aria-label="Go to slide 3"
+          ></button>
+          <button
+            class="indicator"
+            data-slide="4"
+            aria-label="Go to slide 4"
+          ></button>
+          <button
+            class="indicator"
+            data-slide="5"
+            aria-label="Go to slide 5"
+          ></button>
+        </div>
+      </section>
+
+      <!-- Featured Sections -->
+      <section class="gaming-philosophy" aria-label="Our gaming philosophy">
+        <div class="philosophy-container">
+          <div class="philosophy-content">
+            <h2 class="section-title">The Art of Gaming</h2>
+            <p class="philosophy-text">
+              At GameVault, we believe gaming is more than entertainment—it's an
+              art form that connects people across continents. Every game tells
+              a story, every player writes their own chapter.
+            </p>
+            <div class="philosophy-stats">
+              <div class="stat-item">
+                <span class="stat-number">50K+</span>
+                <span class="stat-label">Happy Gamers</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">1000+</span>
+                <span class="stat-label">Game Titles</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Support</span>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-visual">
+            <div class="floating-elements">
+              <div class="floating-icon">🎮</div>
+              <div class="floating-icon">🏆</div>
+              <div class="floating-icon">⭐</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="platform-showcase" aria-label="Gaming platforms">
+        <div class="platform-grid">
+          <div class="platform-card xbox-platform">
+            <div class="platform-icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+            </div>
+            <h3>Xbox Experience</h3>
+            <p>
+              Next-generation gaming with Xbox Series X|S. Experience
+              lightning-fast load times, ray tracing, and 4K gaming at up to 120
+              frames per second.
+            </p>
+            <div class="platform-features">
+              <span class="feature-tag">4K Gaming</span>
+              <span class="feature-tag">Ray Tracing</span>
+              <span class="feature-tag">Quick Resume</span>
+            </div>
+          </div>
+
+          <div class="platform-card pc-platform">
+            <div class="platform-icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"
+                />
+              </svg>
+            </div>
+            <h3>PC Master Race</h3>
+            <p>
+              Unleash unlimited potential with PC gaming. Customize your
+              experience, enjoy mods, and achieve the highest performance
+              possible.
+            </p>
+            <div class="platform-features">
+              <span class="feature-tag">Mods</span>
+              <span class="feature-tag">Customization</span>
+              <span class="feature-tag">Performance</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="community-highlight" aria-label="Gaming community">
+        <div class="community-container">
+          <div class="community-content">
+            <h2>Join Our Gaming Family</h2>
+            <p>
+              Connect with thousands of gamers across Australia. Share
+              strategies, discover new games, and build lasting friendships.
+            </p>
+            <div class="community-benefits">
+              <div class="benefit-item">
+                <div class="benefit-icon">🎯</div>
+                <h4>Weekly Tournaments</h4>
+                <p>Compete for prizes and glory</p>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">💬</div>
+                <h4>Active Discord</h4>
+                <p>24/7 community chat</p>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">🎁</div>
+                <h4>Exclusive Rewards</h4>
+                <p>Member-only discounts</p>
+              </div>
+            </div>
+          </div>
+          <div class="community-visual">
+            <div class="community-avatars">
+              <div class="avatar avatar-1"></div>
+              <div class="avatar avatar-2"></div>
+              <div class="avatar avatar-3"></div>
+              <div class="avatar avatar-4"></div>
+              <div class="avatar avatar-5"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="exclusive-offers" aria-label="Exclusive gaming offers">
+        <div class="offers-container">
+          <h2>Exclusive Gaming Deals</h2>
+          <div class="offers-grid">
+            <div class="offer-card pre-order">
+              <div class="offer-badge">Pre-Order</div>
+              <h3>Early Access Benefits</h3>
+              <p>
+                Get exclusive content and early access to upcoming releases.
+                Pre-order now and receive bonus in-game items.
+              </p>
+              <ul class="offer-features">
+                <li>Exclusive skins and items</li>
+                <li>Early access to beta</li>
+                <li>Special collector's editions</li>
+              </ul>
+            </div>
+
+            <div class="offer-card loyalty">
+              <div class="offer-badge">Loyalty</div>
+              <h3>Rewards Program</h3>
+              <p>
+                Earn points with every purchase and unlock exclusive rewards.
+                The more you game, the more you gain.
+              </p>
+              <ul class="offer-features">
+                <li>Points on every purchase</li>
+                <li>Exclusive member discounts</li>
+                <li>Birthday bonuses</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="tech-innovation"
+        aria-label="Gaming technology innovation"
+      >
+        <div class="innovation-container">
+          <div class="innovation-content">
+            <h2>Cutting-Edge Technology</h2>
+            <p>
+              Stay ahead with the latest gaming technology. From AI-powered
+              graphics to cloud gaming, we bring you the future of gaming today.
+            </p>
+            <div class="tech-highlights">
+              <div class="tech-item">
+                <div class="tech-icon">☁️</div>
+                <h4>Cloud Gaming</h4>
+                <p>Play anywhere, anytime</p>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon">🤖</div>
+                <h4>AI Graphics</h4>
+                <p>Next-level visual fidelity</p>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon">⚡</div>
+                <h4>Instant Loading</h4>
+                <p>No more waiting</p>
+              </div>
+            </div>
+          </div>
+          <div class="innovation-visual">
+            <div class="tech-animation">
+              <div class="pulse-ring"></div>
+              <div class="pulse-ring"></div>
+              <div class="pulse-ring"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="customer-testimonials" aria-label="Customer testimonials">
+        <div class="testimonials-container">
+          <h2>What Our Gamers Say</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "GameVault has the best selection of Xbox games in Australia.
+                  Fast delivery and excellent customer service!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                  <h4>Sarah Mitchell</h4>
+                  <span>Melbourne, VIC</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "As a PC gamer, I love the variety and competitive prices. The
+                  community is amazing too!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                  <h4>James Chen</h4>
+                  <span>Sydney, NSW</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "Pre-ordered my favorite game and got exclusive content.
+                  GameVault always delivers!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                  <h4>Emma Thompson</h4>
+                  <span>Brisbane, QLD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section
+        class="contact-section"
+        aria-label="Contact information and feedback"
+      >
+        <div class="contact-container">
+          <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">🏪</div>
+                <div>
+                  <h4>GameVault Australia</h4>
+                  <p>Premium Gaming Store</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                  <h4>Email</h4>
+                  <p>hello@gamevault.com.au</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <h4>Address</h4>
+                  <p>123 Gaming Street, Sydney NSW 2000, Australia</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div>
+                  <h4>Social Media</h4>
+                  <div class="social-links">
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Discord">Discord</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <h3>Send us a Message</h3>
+            <form class="feedback-form" id="feedbackForm" novalidate>
+              <div class="form-group">
+                <label for="userName">Name</label>
+                <input type="text" id="userName" name="userName" required />
+              </div>
+              <div class="form-group">
+                <label for="userEmail">Email</label>
+                <input type="email" id="userEmail" name="userEmail" required />
+                <span class="error-message" id="emailError"></span>
+              </div>
+              <div class="form-group">
+                <label for="userMessage">Message</label>
+                <textarea
+                  id="userMessage"
+                  name="userMessage"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <iframe
+            id="store-location-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.5!2d151.2093!3d-33.8688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae665e892fdd%3A0xf577d0c4c5c6c7c8!2sSydney%20NSW%2C%20Australia!5e0!3m2!1sen!2sau!4v1234567890"
+            width="100%"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="GameVault Store Location"
+          >
+          </iframe>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script
+      type="module"
+      src="assets/scripts/modules/header-injector.js"
+    ></script>
+    <script
+      type="module"
+      src="assets/scripts/modules/footer-injector.js"
+    ></script>
+    <script
+      type="module"
+      src="assets/scripts/modules/hero-gallery-controller.js"
+    ></script>
+    <script
+      type="module"
+      src="assets/scripts/modules/contact-form-validator.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart - GameVault Australia</title>
+    <meta
+      name="description"
+      content="Your shopping cart at GameVault Australia. Review and manage your game selections."
+    />
+    <link rel="stylesheet" href="assets/styles/global-styles.css" />
+    <link rel="stylesheet" href="assets/styles/shopping-cart-styles.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <main>
+      <section class="cart-hero">
+        <div class="container">
+          <h1>Shopping Cart</h1>
+          <p>Review your selected games and proceed to checkout</p>
+        </div>
+      </section>
+
+      <section class="cart-section">
+        <div class="container">
+          <div class="cart-layout">
+            <div class="cart-items-panel">
+              <div class="cart-header">
+                <h2>Cart Items</h2>
+                <span class="cart-count" id="cartCount">0 items</span>
+              </div>
+
+              <div class="cart-items-container" id="cartItemsContainer">
+                <!-- Cart items will be dynamically inserted here -->
+              </div>
+
+              <div class="empty-cart" id="emptyCart" style="display: none">
+                <div class="empty-cart-content">
+                  <div class="empty-cart-icon">🛒</div>
+                  <h3>Your cart is empty</h3>
+                  <p>Add some games to get started!</p>
+                  <a href="game-catalog.html" class="btn btn-primary"
+                    >Browse Games</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-summary-panel">
+              <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-items">
+                  <div class="summary-item">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                  </div>
+                  <div class="summary-item">
+                    <span>Shipping</span>
+                    <span id="shipping">$0.00</span>
+                  </div>
+                  <div class="summary-item summary-total">
+                    <span>Total</span>
+                    <span id="total">$0.00</span>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary btn-full checkout-btn"
+                  id="checkoutBtn"
+                  disabled
+                >
+                  Proceed to Checkout
+                </button>
+                <a
+                  href="game-catalog.html"
+                  class="btn btn-outline btn-full continue-shopping-btn"
+                >
+                  Continue Shopping
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script
+      type="module"
+      src="assets/scripts/modules/header-injector.js"
+    ></script>
+    <script
+      type="module"
+      src="assets/scripts/modules/footer-injector.js"
+    ></script>
+    <script
+      type="module"
+      src="assets/scripts/modules/shopping-cart-controller.js"
+    ></script>
+  </body>
+</html>

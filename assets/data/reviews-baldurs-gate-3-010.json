@@ -1,0 +1,57 @@
+{
+  "gameId": "pc-baldurs-gate-3-010",
+  "reviews": [
+    {
+      "id": "rev-bg3-001",
+      "userName": "DnDPlayer",
+      "rating": 5,
+      "date": "2023-08-10",
+      "title": "D&D Perfection",
+      "content": "Baldur's Gate 3 is the perfect D&D video game. The turn-based combat is strategic and engaging, the story is compelling, and the choices truly matter. Larian has created something extraordinary.",
+      "verified": true,
+      "helpful": 678
+    },
+    {
+      "id": "rev-bg3-002",
+      "userName": "RPGMaster",
+      "rating": 5,
+      "date": "2023-08-15",
+      "title": "RPG of the Generation",
+      "content": "This game redefines what an RPG can be. The depth of choice, the quality of writing, and the attention to detail are unmatched. Every playthrough feels unique and meaningful.",
+      "verified": true,
+      "helpful": 567
+    },
+    {
+      "id": "rev-bg3-003",
+      "userName": "LarianFan",
+      "rating": 4,
+      "date": "2023-08-20",
+      "title": "Excellent with Minor Issues",
+      "content": "The game is incredible, but Act 3 has some performance issues and bugs. The story and gameplay are top-notch, making this one of the best RPGs ever made despite the technical problems.",
+      "verified": true,
+      "helpful": 234
+    },
+    {
+      "id": "rev-bg3-004",
+      "userName": "CRPGVeteran",
+      "rating": 5,
+      "date": "2023-08-25",
+      "title": "CRPG Renaissance",
+      "content": "This is the game that will bring CRPGs back to the mainstream. The production values are incredible, the voice acting is superb, and the gameplay is accessible yet deep. A masterpiece.",
+      "verified": true,
+      "helpful": 445
+    },
+    {
+      "id": "rev-bg3-005",
+      "userName": "FantasyGamer",
+      "rating": 5,
+      "date": "2023-08-30",
+      "title": "Fantasy RPG Perfection",
+      "content": "Baldur's Gate 3 captures the magic of tabletop D&D perfectly. The companions are memorable, the world is rich, and the combat is strategic. This is what RPGs should aspire to be.",
+      "verified": true,
+      "helpful": 389
+    }
+  ],
+  "averageRating": 4.8,
+  "totalReviews": 5
+}

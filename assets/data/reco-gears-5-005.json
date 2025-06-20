@@ -1,0 +1,37 @@
+{
+  "gameId": "xbox-gears-5-005",
+  "recommendations": [
+    {
+      "id": "reco-gears-001",
+      "gameId": "xbox-halo-infinite-001",
+      "title": "Halo Infinite",
+      "cover": "assets/images/games/halo-infinite.jpg",
+      "price": 89.99,
+      "reason": "Another Xbox exclusive sci-fi shooter with epic campaign"
+    },
+    {
+      "id": "reco-gears-002",
+      "gameId": "xbox-pc-call-of-duty-mw3-011",
+      "title": "Call of Duty: Modern Warfare III",
+      "cover": "assets/images/games/call-of-duty-mw3.jpg",
+      "price": 94.99,
+      "reason": "Action-packed shooter with competitive multiplayer"
+    },
+    {
+      "id": "reco-gears-003",
+      "gameId": "pc-cyberpunk-2077-002",
+      "title": "Cyberpunk 2077",
+      "cover": "assets/images/games/cyberpunk-2077.jpg",
+      "price": 74.5,
+      "reason": "Futuristic action game with immersive world"
+    },
+    {
+      "id": "reco-gears-004",
+      "gameId": "pc-red-dead-redemption-2-006",
+      "title": "Red Dead Redemption 2",
+      "cover": "assets/images/games/red-dead-redemption-2.jpg",
+      "price": 84.99,
+      "reason": "Action-adventure with compelling story and characters"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Details - GameVault Australia</title>
+    <meta
+      name="description"
+      content="Explore game details, reviews, and recommendations at GameVault Australia."
+    />
+    <link rel="stylesheet" href="assets/styles/global-styles.css" />
+    <link rel="stylesheet" href="assets/styles/game-details-styles.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <main>
+      <section class="game-hero" id="gameHero">
+        <div class="container">
+          <div class="game-hero-content">
+            <div class="game-hero-image">
+              <img id="gameCover" src="" alt="" loading="lazy" />
+              <div class="game-platform-badge" id="gamePlatform"></div>
+            </div>
+            <div class="game-hero-info">
+              <h1 id="gameTitle"></h1>
+              <div class="game-meta">
+                <div class="game-rating">
+                  <span class="rating-stars" id="gameRating"></span>
+                  <span class="rating-value" id="gameRatingValue"></span>
+                </div>
+                <div class="game-release" id="gameRelease"></div>
+                <div class="game-stock" id="gameStock"></div>
+              </div>
+              <p class="game-description" id="gameDescription"></p>
+              <div class="game-features" id="gameFeatures"></div>
+              <div class="game-actions">
+                <div class="game-price" id="gamePrice"></div>
+                <button
+                  class="btn btn-primary add-to-cart-detail-btn"
+                  id="addToCartBtn"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="game-details">
+        <div class="container">
+          <div class="game-details-grid">
+            <div class="game-info-panel">
+              <div class="info-section">
+                <h3>Game Information</h3>
+                <div class="info-grid">
+                  <div class="info-item">
+                    <span class="info-label">Developer</span>
+                    <span class="info-value" id="gameDeveloper"></span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Publisher</span>
+                    <span class="info-value" id="gamePublisher"></span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Release Date</span>
+                    <span class="info-value" id="gameReleaseDate"></span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Platform</span>
+                    <span class="info-value" id="gamePlatformInfo"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-section" id="systemRequirementsSection">
+                <h3>System Requirements</h3>
+                <div class="system-req" id="systemRequirements"></div>
+              </div>
+
+              <div class="info-section">
+                <h3>Game Gallery</h3>
+                <div class="game-gallery" id="gameGallery"></div>
+              </div>
+            </div>
+
+            <div class="game-reviews-panel">
+              <h3>Customer Reviews</h3>
+              <div class="reviews-container" id="reviewsContainer">
+                <!-- Reviews will be loaded here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="recommendations-section">
+        <div class="container">
+          <h2>You May Also Like</h2>
+          <div class="recommendations-grid" id="recommendationsGrid">
+            <!-- Recommendations will be loaded here -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script
+      type="module"
+      src="assets/scripts/modules/header-injector.js"
+    ></script>
+    <script
+      type="module"
+      src="assets/scripts/modules/footer-injector.js"
+    ></script>
+    <script
+      type="module"
+      src="assets/scripts/modules/game-details-loader.js"
+    ></script>
+  </body>
+</html>

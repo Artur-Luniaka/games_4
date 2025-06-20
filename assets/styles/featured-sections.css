@@ -1,0 +1,822 @@
+/* Featured Sections Styles - Each with unique design */
+
+/* 1. Gaming Philosophy Section */
+.gaming-philosophy {
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, var(--neutral-200), var(--neutral-100));
+  position: relative;
+  overflow: hidden;
+}
+
+.gaming-philosophy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23e67e22" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="%23f39c12" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="%23f1c40f" opacity="0.1"/></svg>');
+  pointer-events: none;
+}
+
+.philosophy-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.philosophy-content {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.philosophy-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-xl);
+}
+
+.philosophy-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.stat-item {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background: var(--neutral-100);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal);
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.philosophy-visual {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.floating-elements {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 3rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.floating-icon:nth-child(2) {
+  top: 60%;
+  right: 20%;
+  animation-delay: 1s;
+}
+
+.floating-icon:nth-child(3) {
+  bottom: 20%;
+  left: 50%;
+  animation-delay: 2s;
+}
+
+/* 2. Platform Showcase Section */
+.platform-showcase {
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, var(--neutral-100), var(--neutral-200));
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-2xl);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.platform-card {
+  background: var(--neutral-100);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.platform-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+.platform-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+}
+
+.platform-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--spacing-lg);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-100);
+}
+
+.platform-card h3 {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-900);
+}
+
+.platform-card p {
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+.platform-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+}
+
+.feature-tag {
+  background: var(--neutral-200);
+  color: var(--neutral-700);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* 3. Community Highlight Section */
+.community-highlight {
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--secondary-light)
+  );
+  color: var(--neutral-100);
+}
+
+.community-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.community-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--neutral-100);
+}
+
+.community-content p {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-xl);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.community-benefits {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.benefit-item h4 {
+  color: var(--neutral-100);
+  margin-bottom: var(--spacing-xs);
+}
+
+.benefit-item p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.community-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.community-avatars {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.avatar {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  border: 3px solid var(--neutral-100);
+  animation: float 4s ease-in-out infinite;
+}
+
+.avatar-1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0s;
+}
+.avatar-2 {
+  top: 20%;
+  right: 0;
+  animation-delay: 0.5s;
+}
+.avatar-3 {
+  bottom: 20%;
+  right: 0;
+  animation-delay: 1s;
+}
+.avatar-4 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 1.5s;
+}
+.avatar-5 {
+  bottom: 20%;
+  left: 0;
+  animation-delay: 2s;
+}
+
+/* 4. Exclusive Offers Section */
+.exclusive-offers {
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, var(--neutral-100), var(--neutral-200));
+}
+
+.offers-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  text-align: center;
+}
+
+.offers-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--neutral-900);
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-2xl);
+}
+
+.offer-card {
+  background: var(--neutral-100);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.offer-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(230, 126, 34, 0.1),
+    rgba(241, 196, 15, 0.1)
+  );
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.offer-card:hover::before {
+  opacity: 1;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.offer-badge {
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  color: var(--neutral-100);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.offer-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-900);
+}
+
+.offer-card p {
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-lg);
+}
+
+.offer-features {
+  list-style: none;
+  text-align: left;
+}
+
+.offer-features li {
+  padding: var(--spacing-xs) 0;
+  color: var(--neutral-700);
+  position: relative;
+  padding-left: var(--spacing-lg);
+}
+
+.offer-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* 5. Tech Innovation Section */
+.tech-innovation {
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, var(--neutral-900), var(--neutral-800));
+  color: var(--neutral-100);
+}
+
+.innovation-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.innovation-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--neutral-100);
+}
+
+.innovation-content p {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-xl);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.tech-highlights {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  transition: transform var(--transition-normal);
+}
+
+.tech-item:hover {
+  transform: translateX(10px);
+}
+
+.tech-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.tech-item h4 {
+  color: var(--neutral-100);
+  margin-bottom: var(--spacing-xs);
+}
+
+.tech-item p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.innovation-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-animation {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite;
+}
+
+.pulse-ring:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  border-color: var(--accent-color);
+  animation-delay: 0.5s;
+}
+
+.pulse-ring:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  border-color: var(--secondary-color);
+  animation-delay: 1s;
+}
+
+/* 6. Customer Testimonials Section */
+.customer-testimonials {
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, var(--neutral-200), var(--neutral-100));
+}
+
+.testimonials-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  text-align: center;
+}
+
+.testimonials-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--neutral-900);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.testimonial-card {
+  background: var(--neutral-100);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal);
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  font-size: 3rem;
+  color: var(--primary-color);
+  opacity: 0.3;
+  font-family: var(--font-secondary);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.testimonial-content {
+  margin-bottom: var(--spacing-lg);
+}
+
+.testimonial-content p {
+  font-style: italic;
+  color: var(--neutral-700);
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  flex-shrink: 0;
+}
+
+.author-info h4 {
+  color: var(--neutral-900);
+  margin-bottom: var(--spacing-xs);
+  font-size: 1rem;
+}
+
+.author-info span {
+  color: var(--neutral-600);
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .philosophy-container,
+  .community-container,
+  .innovation-container {
+    gap: var(--spacing-xl);
+  }
+
+  .platform-grid,
+  .offers-grid {
+    gap: var(--spacing-xl);
+  }
+
+  .testimonials-grid {
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .gaming-philosophy,
+  .platform-showcase,
+  .community-highlight,
+  .exclusive-offers,
+  .tech-innovation,
+  .customer-testimonials {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .philosophy-container,
+  .community-container,
+  .innovation-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .platform-grid,
+  .offers-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .philosophy-stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .section-title,
+  .community-content h2,
+  .offers-container h2,
+  .innovation-content h2,
+  .testimonials-container h2 {
+    font-size: 2rem;
+  }
+
+  .floating-elements {
+    height: 200px;
+  }
+
+  .floating-icon {
+    font-size: 2rem;
+  }
+
+  .community-avatars {
+    width: 150px;
+    height: 150px;
+  }
+
+  .avatar {
+    width: 45px;
+    height: 45px;
+  }
+
+  .tech-animation {
+    width: 150px;
+    height: 150px;
+  }
+
+  .pulse-ring {
+    width: 75px;
+    height: 75px;
+  }
+
+  .pulse-ring:nth-child(2) {
+    width: 110px;
+    height: 110px;
+  }
+
+  .pulse-ring:nth-child(3) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 360px) {
+  .gaming-philosophy,
+  .platform-showcase,
+  .community-highlight,
+  .exclusive-offers,
+  .tech-innovation,
+  .customer-testimonials {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .philosophy-container,
+  .community-container,
+  .innovation-container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .platform-grid,
+  .offers-grid,
+  .testimonials-grid {
+    padding: 0 var(--spacing-md);
+  }
+
+  .section-title,
+  .community-content h2,
+  .offers-container h2,
+  .innovation-content h2,
+  .testimonials-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .philosophy-text,
+  .community-content p,
+  .innovation-content p {
+    font-size: 1rem;
+  }
+
+  .platform-card,
+  .offer-card,
+  .testimonial-card {
+    padding: var(--spacing-lg);
+  }
+
+  .stat-item {
+    padding: var(--spacing-md);
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .floating-elements {
+    height: 150px;
+  }
+
+  .floating-icon {
+    font-size: 1.5rem;
+  }
+
+  .community-avatars {
+    width: 120px;
+    height: 120px;
+  }
+
+  .avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .tech-animation {
+    width: 120px;
+    height: 120px;
+  }
+
+  .pulse-ring {
+    width: 60px;
+    height: 60px;
+  }
+
+  .pulse-ring:nth-child(2) {
+    width: 90px;
+    height: 90px;
+  }
+
+  .pulse-ring:nth-child(3) {
+    width: 120px;
+    height: 120px;
+  }
+}
