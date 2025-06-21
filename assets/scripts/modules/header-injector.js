@@ -5,10 +5,10 @@ const headerInjectionModule = (() => {
   // Header HTML template
   const createHeaderTemplate = () => {
     return `
-            <header class="site-header" role="banner">
+            <header class="site-header" role="banner" id="mainHeader">
                 <div class="header-container">
                     <div class="header-logo">
-                        <a href="index.html" aria-label="GameVault Australia Home">
+                        <a href="./" aria-label="InteractiveLuckCore Australia Home">
                             <div class="logo-visual">
                                 <div class="logo-icon">🕹️</div>
                                 <div class="logo-text">
@@ -23,16 +23,16 @@ const headerInjectionModule = (() => {
                         <nav class="header-navigation" role="navigation" aria-label="Main navigation">
                             <ul class="nav-menu">
                                 <li class="nav-item">
-                                    <a href="index.html" class="nav-link" data-link-type="page">Home</a>
+                                    <a href="./" class="nav-link" data-link-type="page">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="game-catalog.html" class="nav-link" data-link-type="page">Games</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="index.html#expert-picks" class="nav-link" data-link-type="anchor">Expert Picks</a>
+                                    <a href="./#expert-picks" class="nav-link" data-link-type="anchor">Expert Picks</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="index.html#customer-stories" class="nav-link" data-link-type="anchor">Stories</a>
+                                    <a href="./#customer-stories" class="nav-link" data-link-type="anchor">Stories</a>
                                 </li>
                             </ul>
                         </nav>
@@ -72,7 +72,7 @@ const headerInjectionModule = (() => {
                 <div class="mobile-menu-container">
                     <ul class="mobile-nav-menu">
                         <li class="mobile-nav-item">
-                            <a href="index.html" class="mobile-nav-link" data-link-type="page">
+                            <a href="./" class="mobile-nav-link" data-link-type="page">
                                 <span class="mobile-nav-icon">🏠</span>
                                 Home
                             </a>
@@ -84,13 +84,13 @@ const headerInjectionModule = (() => {
                             </a>
                         </li>
                         <li class="mobile-nav-item">
-                            <a href="index.html#expert-picks" class="mobile-nav-link" data-link-type="anchor">
+                            <a href="./#expert-picks" class="mobile-nav-link" data-link-type="anchor">
                                 <span class="mobile-nav-icon">⭐</span>
                                 Expert Picks
                             </a>
                         </li>
                         <li class="mobile-nav-item">
-                            <a href="index.html#customer-stories" class="mobile-nav-link" data-link-type="anchor">
+                            <a href="./#customer-stories" class="mobile-nav-link" data-link-type="anchor">
                                 <span class="mobile-nav-icon">💬</span>
                                 Stories
                             </a>
@@ -105,8 +105,11 @@ const headerInjectionModule = (() => {
                     </ul>
                     <div class="mobile-menu-footer">
                         <div class="mobile-contact-info">
-                            <p>📧 hello@gamevault.com.au</p>
-                            <p>📱 +61 2 1234 5678</p>
+                            <p>📧 support@interactiveluckcore.com</p>
+                            <p>📱 +61 2 0073 6611</p>
+                        </div>
+                        <div class="mobile-social-links">
+                            <!-- Add social links here -->
                         </div>
                     </div>
                 </div>
@@ -578,7 +581,8 @@ const headerInjectionModule = (() => {
 
   const updateCartCount = () => {
     try {
-      const cart = JSON.parse(localStorage.getItem("gameVaultCart")) || [];
+      const cart =
+        JSON.parse(localStorage.getItem("interactiveLuckCoreCart")) || [];
       const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
       const headerCount = document.getElementById("cartItemCount");
@@ -606,7 +610,12 @@ const headerInjectionModule = (() => {
   };
 
   const setActiveLink = () => {
-    const currentPage = window.location.pathname.split("/").pop();
+    const currentPage = window.location.pathname.split("/").pop() || "./";
+    const isHomePage =
+      window.location.pathname === "/" ||
+      window.location.pathname.endsWith("/") ||
+      currentPage === "./";
+
     document
       .querySelectorAll(".nav-link")
       .forEach((link) => link.removeAttribute("aria-current"));
@@ -617,15 +626,15 @@ const headerInjectionModule = (() => {
     );
     if (pageLink) {
       pageLink.setAttribute("aria-current", "page");
-    } else if (currentPage === "index.html") {
+    } else if (currentPage === "./") {
       // Fallback for root path
       const homeLink = document.querySelector(
-        '.nav-link[data-link-type="page"][href="index.html"]'
+        '.nav-link[data-link-type="page"][href="./"]'
       );
       if (homeLink) homeLink.setAttribute("aria-current", "page");
     }
 
-    if (currentPage === "index.html") {
+    if (currentPage === "./") {
       setupScrollSpy();
     }
   };
@@ -638,7 +647,7 @@ const headerInjectionModule = (() => {
       '.nav-link[data-link-type="anchor"]'
     );
     const homeLink = document.querySelector(
-      '.nav-link[data-link-type="page"][href="index.html"]'
+      '.nav-link[data-link-type="page"][href="./"]'
     );
     const headerHeight =
       parseInt(

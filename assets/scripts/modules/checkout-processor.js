@@ -239,14 +239,15 @@ const checkoutProcessorModule = (() => {
   function generateOrderId() {
     const timestamp = Date.now().toString(36);
     const random = Math.random().toString(36).substr(2, 5);
-    return `GV-${timestamp}-${random}`.toUpperCase();
+    return `ILC-${timestamp}-${random}`.toUpperCase();
   }
 
   function storeOrder(order) {
     try {
-      const orders = JSON.parse(localStorage.getItem("gameVaultOrders")) || [];
+      const orders =
+        JSON.parse(localStorage.getItem("interactiveLuckCoreOrders")) || [];
       orders.push(order);
-      localStorage.setItem("gameVaultOrders", JSON.stringify(orders));
+      localStorage.setItem("interactiveLuckCoreOrders", JSON.stringify(orders));
     } catch (error) {
       console.error("Error storing order:", error);
     }
@@ -254,7 +255,7 @@ const checkoutProcessorModule = (() => {
 
   function clearCart() {
     try {
-      localStorage.removeItem("gameVaultCart");
+      localStorage.removeItem("interactiveLuckCoreCart");
       sessionStorage.removeItem("checkoutCart");
 
       // Update header cart count

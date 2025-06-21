@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GameVault Australia - Premium Xbox & PC Games</title>
+    <title>InteractiveLuckCore.com - Premium Xbox & PC Games</title>
     <meta
       name="description"
-      content="Discover the latest Xbox and PC games at GameVault Australia. Premium gaming experience with exclusive titles and competitive prices."
+      content="Discover the latest Xbox and PC games at InteractiveLuckCore Australia. Premium gaming experience with exclusive titles and competitive prices."
     />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="assets/styles/global-styles.css" />
     <link rel="stylesheet" href="assets/styles/hero-gallery.css" />
     <link rel="stylesheet" href="assets/styles/featured-sections.css" />
@@ -156,7 +157,7 @@
         aria-label="Expert Game Picks"
       >
         <div class="container">
-          <h2>Expert Picks by GameVault</h2>
+          <h2>Expert Picks by InteractiveLuckCore</h2>
           <p>
             Our team of passionate gamers handpicks the best titles for every
             taste. Discover something new every month!
@@ -257,7 +258,7 @@
         aria-label="Satisfaction Guarantee"
       >
         <div class="container">
-          <h2>GameVault Satisfaction Guarantee</h2>
+          <h2>InteractiveLuckCore Satisfaction Guarantee</h2>
           <p>
             We stand by every game and every customer. Not satisfied? We'll make
             it right — no questions asked.
@@ -337,14 +338,15 @@
                 "I bought Forza Horizon 5 for my son — now we race together
                 every weekend!"
               </p>
-              <span class="story-author">— Alex, Sydney</span>
+              <span class="story-author">— Alex, Melbourne</span>
             </div>
             <div class="story-card">
               <div class="story-avatar">
                 <img src="assets/images/avatars/rpgfan.svg" alt="RPG Fan" />
               </div>
               <p>
-                "GameVault always has rare RPGs I can't find anywhere else."
+                "InteractiveLuckCore always has rare RPGs I can't find anywhere
+                else."
               </p>
               <span class="story-author">— Priya, Melbourne</span>
             </div>
@@ -359,9 +361,11 @@
               <span class="story-author">— Ben, Brisbane</span>
             </div>
           </div>
-          <a href="index.html#contact-section" class="btn btn-primary"
-            >Share Your Story</a
-          >
+          <div class="story-actions">
+            <a href="./#contact-section" class="btn btn-primary"
+              >Share Your Story</a
+            >
+          </div>
         </div>
       </section>
 
@@ -378,29 +382,31 @@
               <div class="contact-item">
                 <div class="contact-icon">🏪</div>
                 <div>
-                  <h4>GameVault Australia</h4>
+                  <h4>InteractiveLuckCore Australia</h4>
                   <p>Premium Gaming Store</p>
                 </div>
               </div>
               <div class="contact-item">
                 <div class="contact-icon">📧</div>
                 <div>
-                  <h4>Email</h4>
-                  <p>hello@gamevault.com.au</p>
+                  <h4>Email Us</h4>
+                  <p>support@interactiveluckcore.com</p>
                 </div>
               </div>
               <div class="contact-item">
                 <div class="contact-icon">📍</div>
                 <div>
                   <h4>Address</h4>
-                  <p>123 Gaming Street, Sydney NSW 2000, Australia</p>
+                  <p>
+                    12 Clarendon Street, South Melbourne VIC 3205, Australia
+                  </p>
                 </div>
               </div>
               <div class="contact-item">
                 <div class="contact-icon">📞</div>
                 <div>
                   <h4>Phone</h4>
-                  <p>+61 2 1234 5678</p>
+                  <p>+61 2 0073 6611</p>
                 </div>
               </div>
             </div>
@@ -435,14 +441,14 @@
         <div class="map-container">
           <iframe
             id="store-location-map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.5!2d151.2093!3d-33.8688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae665e892fdd%3A0xf577d0c4c5c6c7c8!2sSydney%20NSW%2C%20Australia!5e0!3m2!1sen!2sau!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.4487221693515!2d144.95631327531858!3d-37.832614871968245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad667b2a3a1a2a7%3A0x30adadf3cc44cf7!2s12%20Clarendon%20St%2C%20South%20Melbourne%20VIC%203205%2C%20Australia!5e0!3m2!1sen!2sau!4v1718387285671!5m2!1sen!2sau"
             width="100%"
             height="400"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="GameVault Store Location"
+            title="InteractiveLuckCore Store Location"
           >
           </iframe>
         </div>
@@ -450,6 +456,23 @@
     </main>
 
     <div id="footer-container"></div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+      <div class="cookie-content">
+        <div class="cookie-text">
+          <h3>🍪 We use cookies</h3>
+          <p>
+            We use cookies to enhance your browsing experience, serve
+            personalized content, and analyze our traffic. By clicking "Accept",
+            you consent to our use of cookies.
+          </p>
+        </div>
+        <div class="cookie-actions">
+          <button id="accept-cookies" class="btn btn-primary">Accept</button>
+        </div>
+      </div>
+    </div>
 
     <script
       type="module"
@@ -466,6 +489,10 @@
     <script
       type="module"
       src="assets/scripts/modules/contact-form-validator.js"
+    ></script>
+    <script
+      type="module"
+      src="assets/scripts/modules/cookie-banner.js"
     ></script>
   </body>
 </html>

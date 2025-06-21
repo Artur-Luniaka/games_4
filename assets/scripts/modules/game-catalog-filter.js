@@ -263,39 +263,35 @@ const gameCatalogFilterModule = (() => {
 
     if (!game) return;
 
-    // Add to cart logic (will be implemented in cart module)
-    addGameToCart(game);
-    showAddToCartNotification(game.title);
-  }
+    // Retrieve cart from local storage
+    const cart =
+      JSON.parse(localStorage.getItem("interactiveLuckCoreCart")) || [];
+    const existingItemIndex = cart.findIndex((item) => item.id === gameId);
 
-  function addGameToCart(game) {
-    try {
-      const cart = JSON.parse(localStorage.getItem("gameVaultCart")) || [];
-      const existingItem = cart.find((item) => item.id === game.id);
-
-      if (existingItem) {
-        existingItem.quantity += 1;
-      } else {
-        cart.push({
-          id: game.id,
-          title: game.title,
-          price: game.price,
-          platform: game.platform,
-          cover: game.cover,
-          quantity: 1,
-        });
-      }
-
-      localStorage.setItem("gameVaultCart", JSON.stringify(cart));
-
-      // Update cart count in header
-      const headerModule = window.headerInjectionModule;
-      if (headerModule && headerModule.updateCartCount) {
-        headerModule.updateCartCount();
-      }
-    } catch (error) {
-      console.error("Error adding to cart:", error);
+    if (existingItemIndex > -1) {
+      cart[existingItemIndex].quantity += 1;
+    } else {
+      cart.push({
+        id: game.id,
+        title: game.title,
+        price: game.price,
+        platform: game.platform,
+        cover: game.cover,
+        quantity: 1,
+      });
     }
+
+    // Save updated cart to local storage
+    localStorage.setItem("interactiveLuckCoreCart", JSON.stringify(cart));
+
+    // Update cart count in header
+    if (window.headerInjectionModule) {
+      if (window.headerInjectionModule.updateCartCount) {
+        window.headerInjectionModule.updateCartCount();
+      }
+    }
+
+    showAddToCartNotification(game.title);
   }
 
   function showAddToCartNotification(gameTitle) {

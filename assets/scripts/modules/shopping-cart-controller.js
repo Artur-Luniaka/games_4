@@ -14,8 +14,9 @@ const shoppingCartControllerModule = (() => {
 
   function loadCartFromStorage() {
     try {
-      const storedCart = localStorage.getItem("gameVaultCart");
+      const storedCart = localStorage.getItem("interactiveLuckCoreCart");
       cartItems = storedCart ? JSON.parse(storedCart) : [];
+      renderCartItems();
     } catch (error) {
       console.error("Error loading cart from storage:", error);
       cartItems = [];
@@ -24,7 +25,12 @@ const shoppingCartControllerModule = (() => {
 
   function saveCartToStorage() {
     try {
-      localStorage.setItem("gameVaultCart", JSON.stringify(cartItems));
+      localStorage.setItem(
+        "interactiveLuckCoreCart",
+        JSON.stringify(cartItems)
+      );
+      updateCartCount();
+      updateCheckoutButtonState();
     } catch (error) {
       console.error("Error saving cart to storage:", error);
     }

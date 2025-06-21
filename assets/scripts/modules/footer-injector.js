@@ -13,7 +13,7 @@ const footerInjectionModule = (() => {
                         <h4>Quick Links</h4>
                         <ul>
                             <li><a href="shopping-cart.html">Cart <span class="cart-count-badge" id="footerCartCount">0</span></a></li>
-                            <li><a href="index.html#contact-section">Contact Us</a></li>
+                            <li><a href="./#contact-section">Contact Us</a></li>
                             <li><a href="about-us.html">About Us</a></li>
                         </ul>
                     </nav>
@@ -144,12 +144,13 @@ const footerInjectionModule = (() => {
 
   const updateFooterCartCount = () => {
     try {
-      const cart = JSON.parse(localStorage.getItem("gameVaultCart")) || [];
-      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const cart =
+        JSON.parse(localStorage.getItem("interactiveLuckCoreCart")) || [];
+      const count = cart.reduce((sum, item) => sum + item.quantity, 0);
       const footerCartCount = document.getElementById("footerCartCount");
       if (footerCartCount) {
-        footerCartCount.textContent = totalItems;
-        footerCartCount.style.display = totalItems > 0 ? "inline-flex" : "none";
+        footerCartCount.textContent = count;
+        footerCartCount.style.display = count > 0 ? "inline-flex" : "none";
       }
     } catch (error) {
       console.error("Error updating footer cart count:", error);

@@ -1,4 +1,5 @@
-/* Privacy Policy Styles - GameVault Australia */
+/* Privacy Policy Styles - InteractiveLuckCore AU */
+
 .privacy-hero {
   background: linear-gradient(
     135deg,
@@ -8,6 +9,7 @@
   color: var(--neutral-100);
   padding: var(--spacing-3xl) 0;
   text-align: center;
+  padding-top: calc(var(--header-height) + var(--spacing-3xl));
 }
 
 .privacy-hero h1 {
@@ -17,7 +19,7 @@
 }
 
 .privacy-hero p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   opacity: 0.9;
   margin-bottom: 0;
 }
@@ -27,31 +29,20 @@
   background: var(--neutral-100);
 }
 
-.privacy-intro {
-  text-align: center;
-  margin-bottom: var(--spacing-3xl);
-}
-
-.privacy-summary {
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: var(--neutral-700);
+.privacy-content .container {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.privacy-sections {
-  max-width: 1000px;
-  margin: 0 auto;
+.last-updated {
+  text-align: right;
+  color: var(--neutral-600);
+  margin-bottom: var(--spacing-xl);
+  font-style: italic;
 }
 
 .privacy-section {
-  margin-bottom: var(--spacing-3xl);
-  background: var(--neutral-100);
-  border: 1px solid var(--neutral-300);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-2xl);
-  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-2xl);
 }
 
 .privacy-section:last-child {
@@ -59,12 +50,32 @@
 }
 
 .privacy-section h2 {
-  font-size: 2rem;
-  margin-bottom: var(--spacing-xl);
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-lg);
   color: var(--neutral-900);
-  border-bottom: 3px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
   padding-bottom: var(--spacing-sm);
-  display: inline-block;
+}
+
+.privacy-section p,
+.privacy-section li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-md);
+}
+
+.privacy-section ul {
+  list-style-type: disc;
+  padding-left: var(--spacing-xl);
+}
+
+.privacy-section address {
+  font-style: normal;
+  background: var(--neutral-200);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary-color);
 }
 
 /* Information Grid */
@@ -270,16 +281,12 @@
     font-size: 2.5rem;
   }
 
-  .privacy-summary {
-    font-size: 1.125rem;
-  }
-
-  .privacy-section {
-    padding: var(--spacing-xl);
+  .privacy-hero p {
+    font-size: 1.1rem;
   }
 
   .privacy-section h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .info-grid,

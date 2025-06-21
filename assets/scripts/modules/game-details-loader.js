@@ -120,7 +120,7 @@ const gameDetailsLoaderModule = (() => {
     }
 
     // Update page title
-    document.title = `${currentGame.title} - GameVault Australia`;
+    document.title = `${currentGame.title} - InteractiveLuckCore.com`;
   }
 
   async function loadGameReviews(gameId) {
@@ -239,7 +239,8 @@ const gameDetailsLoaderModule = (() => {
 
   function addGameToCart(game) {
     try {
-      const cart = JSON.parse(localStorage.getItem("gameVaultCart")) || [];
+      const cart =
+        JSON.parse(localStorage.getItem("interactiveLuckCoreCart")) || [];
       const existingItem = cart.find((item) => item.id === game.id);
 
       if (existingItem) {
@@ -255,7 +256,7 @@ const gameDetailsLoaderModule = (() => {
         });
       }
 
-      localStorage.setItem("gameVaultCart", JSON.stringify(cart));
+      localStorage.setItem("interactiveLuckCoreCart", JSON.stringify(cart));
 
       // Update cart count in header
       const headerModule = window.headerInjectionModule;
