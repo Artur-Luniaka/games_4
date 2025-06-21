@@ -40,13 +40,9 @@ const checkoutProcessorModule = (() => {
     checkoutForm.addEventListener("submit", handleFormSubmit);
 
     // Real-time validation
-    const nameInput = document.getElementById("customerName");
     const emailInput = document.getElementById("customerEmail");
-    const phoneInput = document.getElementById("customerPhone");
 
-    nameInput.addEventListener("blur", () => validateName(nameInput.value));
     emailInput.addEventListener("blur", () => validateEmail(emailInput.value));
-    phoneInput.addEventListener("blur", () => validatePhone(phoneInput.value));
   }
 
   function handleFormSubmit(event) {
@@ -67,48 +63,12 @@ const checkoutProcessorModule = (() => {
   function validateForm(customerData) {
     let isValid = true;
 
-    // Validate name
-    if (!validateName(customerData.name)) {
-      isValid = false;
-    }
-
     // Validate email
     if (!validateEmail(customerData.email)) {
       isValid = false;
     }
 
-    // Validate phone (optional)
-    if (customerData.phone && !validatePhone(customerData.phone)) {
-      isValid = false;
-    }
-
     return isValid;
-  }
-
-  function validateName(name) {
-    const nameError = document.getElementById("nameError");
-    const nameInput = document.getElementById("customerName");
-
-    if (!name || name.trim().length < 2) {
-      showFieldError(
-        nameInput,
-        nameError,
-        "Please enter your full name (minimum 2 characters)"
-      );
-      return false;
-    }
-
-    if (name.trim().length > 50) {
-      showFieldError(
-        nameInput,
-        nameError,
-        "Name is too long (maximum 50 characters)"
-      );
-      return false;
-    }
-
-    clearFieldError(nameInput, nameError);
-    return true;
   }
 
   function validateEmail(email) {
@@ -154,30 +114,6 @@ const checkoutProcessorModule = (() => {
     }
 
     clearFieldError(emailInput, emailError);
-    return true;
-  }
-
-  function validatePhone(phone) {
-    const phoneError = document.getElementById("phoneError");
-    const phoneInput = document.getElementById("customerPhone");
-
-    if (!phone || phone.trim().length === 0) {
-      clearFieldError(phoneInput, phoneError);
-      return true; // Phone is optional
-    }
-
-    // Basic phone validation for Australian numbers
-    const phoneRegex = /^(\+61|0)[2-478](?:[ -]?[0-9]){8}$/;
-    if (!phoneRegex.test(phone.replace(/\s/g, ""))) {
-      showFieldError(
-        phoneInput,
-        phoneError,
-        "Please enter a valid Australian phone number"
-      );
-      return false;
-    }
-
-    clearFieldError(phoneInput, phoneError);
     return true;
   }
 

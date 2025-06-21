@@ -7,31 +7,27 @@ const footerInjectionModule = (() => {
             <footer class="site-footer" role="contentinfo">
                 <div class="footer-container">
                     <div class="footer-branding">
-                        <div class="footer-logo">🎮 GameVault AU</div>
-                        <p class="footer-tagline">Premium Xbox & PC Games for Australia</p>
+                        <div class="footer-logo">🕹️ InteractiveLuckCore AU</div>
                     </div>
                     <nav class="footer-links" aria-label="Footer navigation">
+                        <h4>Quick Links</h4>
                         <ul>
-                            <li><a href="privacy-essence.html">Privacy Policy</a></li>
-                            <li><a href="terms-accord.html">Terms of Service</a></li>
-                            <li><a href="refund-clarity.html">Return & Refund Policy</a></li>
-                            <li><a href="shipping-journey.html">Shipping & Delivery</a></li>
+                            <li><a href="shopping-cart.html">Cart <span class="cart-count-badge" id="footerCartCount">0</span></a></li>
+                            <li><a href="index.html#contact-section">Contact Us</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
                         </ul>
                     </nav>
-                    <div class="footer-contacts">
-                        <div class="footer-contact-item">📧 hello@gamevault.com.au</div>
-                        <div class="footer-contact-item">🏢 123 Gaming Street, Sydney NSW 2000</div>
-                        <div class="footer-contact-item">🌏 Australia</div>
-                        <div class="footer-socials">
-                            <a href="#" aria-label="Facebook">Facebook</a>
-                            <a href="#" aria-label="Twitter">Twitter</a>
-                            <a href="#" aria-label="Instagram">Instagram</a>
-                            <a href="#" aria-label="Discord">Discord</a>
-                        </div>
-                    </div>
+                    <nav class="footer-links" aria-label="Footer legal links">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="terms-of-service.html">Terms of Service</a></li>
+                            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="footer-bottom">
-                    <span>&copy; 2024 GameVault Australia. All rights reserved.</span>
+                    <span>&copy; 2025 InteractiveLuckCore.com | All rights reserved.</span>
                 </div>
             </footer>
         `;
@@ -53,13 +49,14 @@ const footerInjectionModule = (() => {
                 margin: 0 auto;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
                 align-items: flex-start;
                 gap: var(--spacing-2xl);
                 padding: 0 var(--spacing-lg);
             }
-            .footer-branding {
-                flex: 1 1 200px;
+            .footer-branding,
+            .footer-links {
+                flex: 1 1 0;
+                min-width: 0;
             }
             .footer-logo {
                 font-size: 1.5rem;
@@ -71,6 +68,12 @@ const footerInjectionModule = (() => {
                 color: var(--neutral-300);
                 font-size: 1rem;
                 margin-bottom: var(--spacing-lg);
+            }
+            .footer-links h4 {
+                color: var(--neutral-100);
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-bottom: var(--spacing-md);
             }
             .footer-links ul {
                 list-style: none;
@@ -90,28 +93,19 @@ const footerInjectionModule = (() => {
                 color: var(--primary-color);
                 text-decoration: underline;
             }
-            .footer-contacts {
-                flex: 1 1 200px;
-                display: flex;
-                flex-direction: column;
-                gap: var(--spacing-sm);
-            }
-            .footer-contact-item {
-                color: var(--neutral-200);
-                font-size: 0.95rem;
-            }
-            .footer-socials {
-                margin-top: var(--spacing-sm);
-                display: flex;
-                gap: var(--spacing-md);
-            }
-            .footer-socials a {
-                color: var(--accent-color);
-                font-size: 1.1rem;
-                transition: color var(--transition-fast);
-            }
-            .footer-socials a:hover {
-                color: var(--primary-color);
+            .cart-count-badge {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--primary-color);
+                color: var(--neutral-100);
+                font-size: 0.75rem;
+                font-weight: 700;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                margin-left: var(--spacing-xs);
+                transition: transform var(--transition-fast);
             }
             .footer-bottom {
                 text-align: center;
@@ -125,7 +119,7 @@ const footerInjectionModule = (() => {
                     gap: var(--spacing-lg);
                     padding: 0 var(--spacing-md);
                 }
-                .footer-branding, .footer-contacts {
+                .footer-branding {
                     align-items: flex-start;
                 }
             }
@@ -148,7 +142,27 @@ const footerInjectionModule = (() => {
     document.head.appendChild(createFooterStyles());
   };
 
-  return { initialize: initializeFooter };
+  const updateFooterCartCount = () => {
+    try {
+      const cart = JSON.parse(localStorage.getItem("gameVaultCart")) || [];
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const footerCartCount = document.getElementById("footerCartCount");
+      if (footerCartCount) {
+        footerCartCount.textContent = totalItems;
+        footerCartCount.style.display = totalItems > 0 ? "inline-flex" : "none";
+      }
+    } catch (error) {
+      console.error("Error updating footer cart count:", error);
+    }
+  };
+
+  return {
+    initialize: () => {
+      initializeFooter();
+      updateFooterCartCount();
+    },
+    updateCartCount: updateFooterCartCount,
+  };
 })();
 
 if (document.readyState === "loading") {

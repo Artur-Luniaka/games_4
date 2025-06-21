@@ -10,9 +10,9 @@ const headerInjectionModule = (() => {
                     <div class="header-logo">
                         <a href="index.html" aria-label="GameVault Australia Home">
                             <div class="logo-visual">
-                                <div class="logo-icon">🎮</div>
+                                <div class="logo-icon">🕹️</div>
                                 <div class="logo-text">
-                                    <span class="logo-title">GameVault</span>
+                                    <span class="logo-title">InteractiveLuckCore</span>
                                     <span class="logo-subtitle">Australia</span>
                                 </div>
                             </div>
@@ -578,27 +578,35 @@ const headerInjectionModule = (() => {
 
   const updateCartCount = () => {
     try {
-      const cartData = JSON.parse(localStorage.getItem("gameVaultCart")) || [];
-      const cartCount = cartData.reduce(
-        (total, item) => total + (item.quantity || 1),
-        0
-      );
+      const cart = JSON.parse(localStorage.getItem("gameVaultCart")) || [];
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
-      const cartCountElements = document.querySelectorAll(
-        "#cartItemCount, #mobileCartCount"
-      );
-      cartCountElements.forEach((element) => {
-        element.textContent = cartCount;
-        element.style.display = cartCount > 0 ? "flex" : "none";
-      });
+      const headerCount = document.getElementById("cartItemCount");
+      const mobileCount = document.getElementById("mobileCartCount");
+
+      if (headerCount) {
+        headerCount.textContent = totalItems;
+        headerCount.style.display = totalItems > 0 ? "inline-flex" : "none";
+      }
+      if (mobileCount) {
+        mobileCount.textContent = totalItems;
+        mobileCount.style.display = totalItems > 0 ? "inline-flex" : "none";
+      }
+
+      // Also update footer cart count if the module is available
+      if (
+        window.footerInjectionModule &&
+        window.footerInjectionModule.updateCartCount
+      ) {
+        window.footerInjectionModule.updateCartCount();
+      }
     } catch (error) {
-      console.warn("Error updating cart count:", error);
+      console.error("Error updating cart counts:", error);
     }
   };
 
   const setActiveLink = () => {
-    const currentPage =
-      window.location.pathname.split("/").pop() || "index.html";
+    const currentPage = window.location.pathname.split("/").pop();
     document
       .querySelectorAll(".nav-link")
       .forEach((link) => link.removeAttribute("aria-current"));

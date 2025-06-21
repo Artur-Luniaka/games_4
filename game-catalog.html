@@ -31,24 +31,73 @@
             <button
               class="filter-toggle"
               id="filterToggle"
-              aria-expanded="false"
+              aria-expanded="true"
             >
               <span class="filter-icon">🔍</span>
               Filter Games
               <span class="toggle-arrow">▼</span>
             </button>
 
-            <div class="filter-panel" id="filterPanel" aria-hidden="true">
+            <div class="filter-panel" id="filterPanel">
               <div class="filter-group">
                 <h3>Platform</h3>
                 <div class="filter-options">
                   <label class="filter-option">
-                    <input type="checkbox" value="Xbox" checked />
-                    <span class="checkmark">Xbox</span>
+                    <input
+                      type="checkbox"
+                      name="platform"
+                      value="Xbox"
+                      checked
+                    />
+                    <span class="checkmark"></span> Xbox
                   </label>
                   <label class="filter-option">
-                    <input type="checkbox" value="PC" checked />
-                    <span class="checkmark">PC</span>
+                    <input type="checkbox" name="platform" value="PC" checked />
+                    <span class="checkmark"></span> PC
+                  </label>
+                </div>
+              </div>
+              <div class="filter-group">
+                <h3>Genre</h3>
+                <div class="filter-options" id="genreFilterOptions">
+                  <!-- Жанры будут добавлены динамически -->
+                </div>
+              </div>
+              <div class="filter-group">
+                <h3>Price Range</h3>
+                <div class="price-range-slider">
+                  <input
+                    type="range"
+                    id="priceRange"
+                    min="0"
+                    max="150"
+                    value="150"
+                  />
+                  <div class="price-range-values">
+                    <span>$0</span>
+                    <span id="priceRangeValue">$150</span>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-group">
+                <h3>Availability</h3>
+                <div class="filter-options">
+                  <label class="filter-option">
+                    <input
+                      type="checkbox"
+                      name="availability"
+                      value="inStock"
+                      checked
+                    />
+                    <span class="checkmark"></span> In Stock
+                  </label>
+                  <label class="filter-option">
+                    <input
+                      type="checkbox"
+                      name="availability"
+                      value="preOrder"
+                    />
+                    <span class="checkmark"></span> Pre-order
                   </label>
                 </div>
               </div>

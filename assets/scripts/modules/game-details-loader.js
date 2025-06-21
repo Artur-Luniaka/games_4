@@ -107,19 +107,16 @@ const gameDetailsLoaderModule = (() => {
       systemReqSection.style.display = "none";
     }
 
-    // Game gallery
-    const galleryContainer = document.getElementById("gameGallery");
+    // Populate game gallery
+    const gameGallery = document.getElementById("gameGallery");
     if (currentGame.gallery && currentGame.gallery.length > 0) {
-      galleryContainer.innerHTML = currentGame.gallery
-        .map(
-          (image) =>
-            `<div class="gallery-item">
-                    <img src="${image}" alt="${currentGame.title} screenshot" loading="lazy">
-                </div>`
-        )
-        .join("");
+      gameGallery.innerHTML = `
+        <div class="gallery-item">
+          <img src="${currentGame.gallery[0]}" alt="${currentGame.title} screenshot" loading="lazy" />
+        </div>
+      `;
     } else {
-      galleryContainer.innerHTML = "<p>No gallery images available</p>";
+      gameGallery.innerHTML = "<p>No images available.</p>";
     }
 
     // Update page title

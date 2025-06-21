@@ -3,10 +3,16 @@ const gameCatalogFilterModule = (() => {
   "use strict";
   let gamesData = [];
   let filteredGames = [];
-  let activeFilters = { platforms: ["Xbox", "PC"] };
+  let activeFilters = {
+    platforms: ["Xbox", "PC"],
+    genres: [],
+    maxPrice: 150,
+    availability: ["inStock"],
+  };
 
   async function initializeGameCatalog() {
     await loadGamesData();
+    populateGenreFilter();
     setupFilterEvents();
     renderGamesGrid();
   }
@@ -29,11 +35,13 @@ const gameCatalogFilterModule = (() => {
     const applyFiltersBtn = document.getElementById("applyFilters");
     const clearFiltersBtn = document.getElementById("clearFilters");
     const resetFiltersBtn = document.getElementById("resetFilters");
+    const priceRange = document.getElementById("priceRange");
 
     filterToggle.addEventListener("click", toggleFilterPanel);
     applyFiltersBtn.addEventListener("click", applyFilters);
     clearFiltersBtn.addEventListener("click", clearFilters);
     resetFiltersBtn.addEventListener("click", resetFilters);
+    priceRange.addEventListener("input", updatePriceValue);
   }
 
   function toggleFilterPanel() {
@@ -46,10 +54,31 @@ const gameCatalogFilterModule = (() => {
   }
 
   function applyFilters() {
+    // Platforms
     const platformCheckboxes = document.querySelectorAll(
-      '.filter-option input[type="checkbox"]'
+      'input[name="platform"]'
     );
     activeFilters.platforms = Array.from(platformCheckboxes)
+      .filter((checkbox) => checkbox.checked)
+      .map((checkbox) => checkbox.value);
+
+    // Genres
+    const genreCheckboxes = document.querySelectorAll('input[name="genre"]');
+    activeFilters.genres = Array.from(genreCheckboxes)
+      .filter((checkbox) => checkbox.checked)
+      .map((checkbox) => checkbox.value);
+
+    // Price
+    activeFilters.maxPrice = parseInt(
+      document.getElementById("priceRange").value,
+      10
+    );
+
+    // Availability
+    const availabilityCheckboxes = document.querySelectorAll(
+      'input[name="availability"]'
+    );
+    activeFilters.availability = Array.from(availabilityCheckboxes)
       .filter((checkbox) => checkbox.checked)
       .map((checkbox) => checkbox.value);
 
@@ -59,33 +88,103 @@ const gameCatalogFilterModule = (() => {
   }
 
   function clearFilters() {
+    // Clear platforms
     const platformCheckboxes = document.querySelectorAll(
-      '.filter-option input[type="checkbox"]'
+      'input[name="platform"]'
     );
-    platformCheckboxes.forEach((checkbox) => {
-      checkbox.checked = false;
-    });
+    platformCheckboxes.forEach((checkbox) => (checkbox.checked = false));
     activeFilters.platforms = [];
+
+    // Clear genres
+    const genreCheckboxes = document.querySelectorAll('input[name="genre"]');
+    genreCheckboxes.forEach((checkbox) => (checkbox.checked = false));
+    activeFilters.genres = [];
+
+    // Clear price
+    const priceRange = document.getElementById("priceRange");
+    priceRange.value = 150;
+    updatePriceValue();
+    activeFilters.maxPrice = 150;
+
+    // Clear availability
+    const availabilityCheckboxes = document.querySelectorAll(
+      'input[name="availability"]'
+    );
+    availabilityCheckboxes.forEach((checkbox) => (checkbox.checked = false));
+    activeFilters.availability = [];
   }
 
   function resetFilters() {
+    // Reset platforms
     const platformCheckboxes = document.querySelectorAll(
-      '.filter-option input[type="checkbox"]'
+      'input[name="platform"]'
     );
-    platformCheckboxes.forEach((checkbox) => {
-      checkbox.checked = true;
+    platformCheckboxes.forEach((checkbox) => (checkbox.checked = true));
+
+    // Reset genres
+    const genreCheckboxes = document.querySelectorAll('input[name="genre"]');
+    genreCheckboxes.forEach((checkbox) => (checkbox.checked = false));
+
+    // Reset price
+    const priceRange = document.getElementById("priceRange");
+    priceRange.value = 150;
+    updatePriceValue();
+
+    // Reset availability
+    const availabilityCheckboxes = document.querySelectorAll(
+      'input[name="availability"]'
+    );
+    availabilityCheckboxes.forEach((checkbox) => {
+      checkbox.checked = checkbox.value === "inStock";
     });
-    activeFilters.platforms = ["Xbox", "PC"];
+
     applyFilters();
   }
 
   function filterGames() {
     filteredGames = gamesData.filter((game) => {
-      const hasMatchingPlatform = game.platform.some((platform) =>
-        activeFilters.platforms.includes(platform)
-      );
-      return hasMatchingPlatform;
+      // Platform filter
+      const platformMatch =
+        activeFilters.platforms.length === 0 ||
+        game.platform.some((p) => activeFilters.platforms.includes(p));
+
+      // Genre filter
+      const genreMatch =
+        activeFilters.genres.length === 0 ||
+        game.features.some((f) => activeFilters.genres.includes(f));
+
+      // Price filter
+      const priceMatch = game.price <= activeFilters.maxPrice;
+
+      // Availability filter
+      const availabilityMatch =
+        activeFilters.availability.length === 0 ||
+        (activeFilters.availability.includes("inStock") && game.inStock) ||
+        (activeFilters.availability.includes("preOrder") && !game.inStock); // Assuming !inStock means pre-order
+
+      return platformMatch && genreMatch && priceMatch && availabilityMatch;
     });
+  }
+
+  function populateGenreFilter() {
+    const allGenres = [...new Set(gamesData.flatMap((game) => game.features))];
+    const genreFilterOptions = document.getElementById("genreFilterOptions");
+    genreFilterOptions.innerHTML = allGenres
+      .map(
+        (genre) => `
+            <label class="filter-option">
+                <input type="checkbox" name="genre" value="${genre}" />
+                <span class="checkmark"></span> ${genre}
+            </label>
+        `
+      )
+      .join("");
+  }
+
+  function updatePriceValue() {
+    const priceRange = document.getElementById("priceRange");
+    const priceRangeValue = document.getElementById("priceRangeValue");
+    priceRangeValue.textContent = `$${priceRange.value}`;
   }
 
   function renderGamesGrid() {
