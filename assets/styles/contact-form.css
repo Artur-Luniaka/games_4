@@ -251,6 +251,11 @@
   text-align: center;
   margin-bottom: var(--spacing-lg);
   animation: slideInDown 0.5s ease-out;
+  box-shadow: var(--shadow-lg);
+  border-left: 4px solid var(--secondary-dark);
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
 }
 
 .form-error {
@@ -388,6 +393,17 @@
 
   .map-container iframe {
     height: 300px;
+  }
+
+  /* Mobile form success message */
+  .form-success {
+    padding: var(--spacing-md);
+    font-size: 0.95rem;
+  }
+
+  .form-error {
+    padding: var(--spacing-md);
+    font-size: 0.95rem;
   }
 }
 

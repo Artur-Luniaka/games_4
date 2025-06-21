@@ -547,6 +547,18 @@ const headerInjectionModule = (() => {
 
       document.body.style.overflow = newIsExpanded ? "hidden" : "";
     });
+
+    // Close mobile menu when any mobile menu link is clicked
+    const mobileMenuLinks = mobileMenu.querySelectorAll(".mobile-nav-link");
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        // Close mobile menu
+        toggleButton.setAttribute("aria-expanded", "false");
+        mobileMenu.setAttribute("aria-hidden", "true");
+        mobileMenu.classList.remove("active");
+        document.body.style.overflow = "";
+      });
+    });
   };
 
   const initializeScrollEffects = () => {

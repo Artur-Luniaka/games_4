@@ -59,9 +59,36 @@ const feedbackFormGuardian = (() => {
     successMsg.className = "form-success";
     successMsg.textContent =
       "Thank you for your message! We will get back to you soon.";
+
+    // Insert the success message before the form
     form.parentNode.insertBefore(successMsg, form);
+
+    // Calculate header height for proper scrolling
+    const headerHeight =
+      parseInt(
+        getComputedStyle(document.documentElement).getPropertyValue(
+          "--header-height"
+        )
+      ) || 80;
+
+    // Wait for the animation to complete before scrolling
     setTimeout(() => {
-      successMsg.remove();
+      // Scroll to the success message with header offset
+      const successMsgRect = successMsg.getBoundingClientRect();
+      const scrollTop =
+        window.pageYOffset + successMsgRect.top - headerHeight - 20;
+
+      window.scrollTo({
+        top: scrollTop,
+        behavior: "smooth",
+      });
+    }, 300); // Wait for slideInDown animation to start
+
+    // Remove the message after 4 seconds
+    setTimeout(() => {
+      if (successMsg.parentNode) {
+        successMsg.remove();
+      }
     }, 4000);
   }
 
