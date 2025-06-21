@@ -5,7 +5,7 @@
       "id": "reco-msfs-001",
       "gameId": "xbox-pc-forza-horizon-5-003",
       "title": "Forza Horizon 5",
-      "cover": "assets/images/games/forza-horizon-5.jpg",
+      "cover": "assets/images/forza-horizon-5.jpg",
       "price": 69.0,
       "reason": "Another Microsoft simulation game with stunning graphics"
     },
@@ -13,7 +13,7 @@
       "id": "reco-msfs-002",
       "gameId": "xbox-sea-of-thieves-007",
       "title": "Sea of Thieves",
-      "cover": "assets/images/games/sea-of-thieves.jpg",
+      "cover": "assets/images/sea-of-thieves.jpg",
       "price": 69.99,
       "reason": "Microsoft game with exploration and beautiful environments"
     },
@@ -21,7 +21,7 @@
       "id": "reco-msfs-003",
       "gameId": "pc-red-dead-redemption-2-006",
       "title": "Red Dead Redemption 2",
-      "cover": "assets/images/games/red-dead-redemption-2.jpg",
+      "cover": "assets/images/red-dead-redemption-2.jpg",
       "price": 84.99,
       "reason": "Open-world game with vast landscapes to explore"
     },
@@ -29,7 +29,7 @@
       "id": "reco-msfs-004",
       "gameId": "pc-elden-ring-004",
       "title": "Elden Ring",
-      "cover": "assets/images/games/elden-ring.jpg",
+      "cover": "assets/images/elden-ring.jpg",
       "price": 59.99,
       "reason": "Open-world adventure with exploration and discovery"
     }

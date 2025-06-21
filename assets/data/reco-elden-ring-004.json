@@ -5,7 +5,7 @@
       "id": "reco-elden-001",
       "gameId": "pc-baldurs-gate-3-010",
       "title": "Baldur's Gate 3",
-      "cover": "assets/images/games/baldurs-gate-3.jpg",
+      "cover": "assets/images/baldurs-gate-3.jpg",
       "price": 79.99,
       "reason": "Fantasy RPG with deep storytelling and challenging gameplay"
     },
@@ -13,7 +13,7 @@
       "id": "reco-elden-002",
       "gameId": "pc-witcher-3-008",
       "title": "The Witcher 3: Wild Hunt",
-      "cover": "assets/images/games/witcher-3.jpg",
+      "cover": "assets/images/witcher-3.jpg",
       "price": 49.99,
       "reason": "Epic fantasy RPG with open world and rich lore"
     },
@@ -21,7 +21,7 @@
       "id": "reco-elden-003",
       "gameId": "pc-red-dead-redemption-2-006",
       "title": "Red Dead Redemption 2",
-      "cover": "assets/images/games/red-dead-redemption-2.jpg",
+      "cover": "assets/images/red-dead-redemption-2.jpg",
       "price": 84.99,
       "reason": "Open-world adventure with immersive storytelling"
     },
@@ -29,7 +29,7 @@
       "id": "reco-elden-004",
       "gameId": "pc-cyberpunk-2077-002",
       "title": "Cyberpunk 2077",
-      "cover": "assets/images/games/cyberpunk-2077.jpg",
+      "cover": "assets/images/cyberpunk-2077.jpg",
       "price": 74.5,
       "reason": "Action RPG with challenging combat and deep world"
     }

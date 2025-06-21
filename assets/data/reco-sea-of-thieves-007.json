@@ -5,7 +5,7 @@
       "id": "reco-sea-001",
       "gameId": "xbox-microsoft-flight-simulator-009",
       "title": "Microsoft Flight Simulator",
-      "cover": "assets/images/games/microsoft-flight-simulator.jpg",
+      "cover": "assets/images/microsoft-flight-simulator.jpg",
       "price": 89.99,
       "reason": "Another Microsoft simulation game with exploration focus"
     },
@@ -13,7 +13,7 @@
       "id": "reco-sea-002",
       "gameId": "pc-elden-ring-004",
       "title": "Elden Ring",
-      "cover": "assets/images/games/elden-ring.jpg",
+      "cover": "assets/images/elden-ring.jpg",
       "price": 59.99,
       "reason": "Open-world adventure with exploration and discovery"
     },
@@ -21,7 +21,7 @@
       "id": "reco-sea-003",
       "gameId": "pc-red-dead-redemption-2-006",
       "title": "Red Dead Redemption 2",
-      "cover": "assets/images/games/red-dead-redemption-2.jpg",
+      "cover": "assets/images/red-dead-redemption-2.jpg",
       "price": 84.99,
       "reason": "Open-world game with immersive environment and exploration"
     },
@@ -29,7 +29,7 @@
       "id": "reco-sea-004",
       "gameId": "xbox-pc-forza-horizon-5-003",
       "title": "Forza Horizon 5",
-      "cover": "assets/images/games/forza-horizon-5.jpg",
+      "cover": "assets/images/forza-horizon-5.jpg",
       "price": 69.0,
       "reason": "Open-world game with beautiful environments to explore"
     }

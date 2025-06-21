@@ -820,3 +820,391 @@
     height: 120px;
   }
 }
+
+/* New Sections Styles */
+
+/* 1. Expert Picks Section */
+.expert-picks {
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, var(--neutral-100), var(--neutral-200));
+  position: relative;
+  overflow: hidden;
+}
+
+.expert-picks::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="10" y="10" width="8" height="8" fill="%23e67e22" opacity="0.05"/><rect x="80" y="30" width="6" height="6" fill="%23f39c12" opacity="0.05"/><rect x="30" y="80" width="4" height="4" fill="%23f1c40f" opacity="0.05"/></svg>');
+  pointer-events: none;
+}
+
+.expert-picks .container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.expert-picks h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.expert-picks > .container > p {
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-2xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.picks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.pick-card {
+  background: var(--neutral-100);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--neutral-300);
+}
+
+.pick-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.pick-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+}
+
+.pick-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-900);
+}
+
+.pick-card p {
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.pick-card .btn {
+  margin-top: var(--spacing-md);
+}
+
+/* 2. Satisfaction Guarantee Section */
+.satisfaction-guarantee {
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-dark)
+  );
+  color: var(--neutral-100);
+  position: relative;
+}
+
+.satisfaction-guarantee::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="3" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="2" fill="white" opacity="0.1"/><circle cx="40" cy="80" r="1.5" fill="white" opacity="0.1"/></svg>');
+  pointer-events: none;
+}
+
+.satisfaction-guarantee .container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.satisfaction-guarantee h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-100);
+}
+
+.satisfaction-guarantee > .container > p {
+  text-align: center;
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-2xl);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.guarantee-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.feature {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-normal);
+}
+
+.feature:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  display: block;
+}
+
+.feature h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--neutral-100);
+}
+
+.feature p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.satisfaction-guarantee .btn-outline {
+  border-color: var(--neutral-100);
+  color: var(--neutral-100);
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.satisfaction-guarantee .btn-outline:hover {
+  background: var(--neutral-100);
+  color: var(--primary-color);
+}
+
+/* 3. Customer Stories Section */
+.customer-stories {
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, var(--neutral-200), var(--neutral-100));
+}
+
+.customer-stories .container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.customer-stories h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.story-card {
+  background: var(--neutral-100);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--neutral-300);
+}
+
+.story-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--accent-color)
+  );
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--secondary-color);
+}
+
+.story-avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--spacing-lg);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--primary-color);
+  box-shadow: var(--shadow-md);
+}
+
+.story-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-card p {
+  font-size: 1.125rem;
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.story-author {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.customer-stories .btn-primary {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* Responsive Design for New Sections */
+@media (max-width: 1280px) {
+  .picks-grid,
+  .guarantee-features,
+  .stories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .expert-picks,
+  .satisfaction-guarantee,
+  .customer-stories {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .expert-picks h2,
+  .satisfaction-guarantee h2,
+  .customer-stories h2 {
+    font-size: 2rem;
+  }
+
+  .picks-grid,
+  .guarantee-features,
+  .stories-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .pick-card,
+  .feature,
+  .story-card {
+    padding: var(--spacing-lg);
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+
+  .story-avatar {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 360px) {
+  .expert-picks,
+  .satisfaction-guarantee,
+  .customer-stories {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .expert-picks h2,
+  .satisfaction-guarantee h2,
+  .customer-stories h2 {
+    font-size: 1.75rem;
+  }
+
+  .pick-card,
+  .feature,
+  .story-card {
+    padding: var(--spacing-md);
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+  }
+
+  .story-avatar {
+    width: 50px;
+    height: 50px;
+  }
+}

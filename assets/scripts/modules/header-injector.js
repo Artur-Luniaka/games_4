@@ -19,35 +19,41 @@ const headerInjectionModule = (() => {
                         </a>
                     </div>
 
-                    <nav class="header-navigation" role="navigation" aria-label="Main navigation">
-                        <ul class="nav-menu">
-                            <li class="nav-item">
-                                <a href="index.html" class="nav-link" aria-current="page">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="game-catalog.html" class="nav-link">Games</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="shopping-cart.html" class="nav-link cart-link">
-                                    Cart
-                                    <span class="cart-count" id="cartItemCount">0</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <div class="header-right">
+                        <nav class="header-navigation" role="navigation" aria-label="Main navigation">
+                            <ul class="nav-menu">
+                                <li class="nav-item">
+                                    <a href="index.html" class="nav-link" data-link-type="page">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="game-catalog.html" class="nav-link" data-link-type="page">Games</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="index.html#expert-picks" class="nav-link" data-link-type="anchor">Expert Picks</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="index.html#customer-stories" class="nav-link" data-link-type="anchor">Stories</a>
+                                </li>
+                            </ul>
+                        </nav>
 
-                    <div class="header-actions">
-                        <button class="mobile-menu-toggle" 
-                                aria-label="Toggle mobile menu" 
-                                aria-expanded="false"
-                                aria-controls="mobileMenu">
-                            <div class="burger-container">
-                                <div class="burger-line burger-line-1"></div>
-                                <div class="burger-line burger-line-2"></div>
-                                <div class="burger-line burger-line-3"></div>
-                                <div class="burger-circle"></div>
-                            </div>
-                        </button>
+                        <div class="header-actions">
+                            <a href="shopping-cart.html" class="nav-link cart-link desktop-cart" data-link-type="page">
+                                Cart
+                                <span class="cart-count" id="cartItemCount">0</span>
+                            </a>
+                            <button class="mobile-menu-toggle" 
+                                    aria-label="Toggle mobile menu" 
+                                    aria-expanded="false"
+                                    aria-controls="mobileMenu">
+                                <div class="burger-container">
+                                    <div class="burger-line burger-line-1"></div>
+                                    <div class="burger-line burger-line-2"></div>
+                                    <div class="burger-line burger-line-3"></div>
+                                    <div class="burger-circle"></div>
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -119,6 +125,26 @@ const headerInjectionModule = (() => {
                 height: var(--header-height);
             }
 
+            .header-right {
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-xl);
+            }
+            
+            .header-logo {
+                flex-shrink: 0;
+            }
+
+            .header-navigation {
+                /* This class is now mainly a semantic wrapper */
+            }
+
+            .header-actions {
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-md);
+            }
+
             /* Logo Styles */
             .header-logo a {
                 text-decoration: none;
@@ -157,11 +183,6 @@ const headerInjectionModule = (() => {
             }
 
             /* Navigation Styles */
-            .header-navigation {
-                display: flex;
-                align-items: center;
-            }
-
             .nav-menu {
                 display: flex;
                 list-style: none;
@@ -205,6 +226,7 @@ const headerInjectionModule = (() => {
             .nav-link[aria-current="page"] {
                 color: var(--primary-color);
                 background: rgba(230, 126, 34, 0.1);
+                font-weight: 700;
             }
 
             .cart-link {
@@ -393,8 +415,17 @@ const headerInjectionModule = (() => {
 
             /* Responsive Design */
             @media (max-width: 768px) {
-                .header-navigation {
+                .header-container {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .header-navigation, .desktop-cart {
                     display: none;
+                }
+
+                .header-right {
+                    gap: 0;
                 }
 
                 .mobile-menu-toggle {
@@ -524,6 +555,9 @@ const headerInjectionModule = (() => {
 
     // Update cart count from localStorage
     updateCartCount();
+
+    // Set active link
+    setActiveLink();
   };
 
   // Mobile menu functionality
@@ -614,6 +648,87 @@ const headerInjectionModule = (() => {
     } catch (error) {
       console.warn("Error updating cart count:", error);
     }
+  };
+
+  const setActiveLink = () => {
+    const currentPage =
+      window.location.pathname.split("/").pop() || "index.html";
+    document
+      .querySelectorAll(".nav-link")
+      .forEach((link) => link.removeAttribute("aria-current"));
+
+    // Highlight page links
+    const pageLink = document.querySelector(
+      `.nav-link[data-link-type="page"][href$="${currentPage}"]`
+    );
+    if (pageLink) {
+      pageLink.setAttribute("aria-current", "page");
+    } else if (currentPage === "index.html") {
+      // Fallback for root path
+      const homeLink = document.querySelector(
+        '.nav-link[data-link-type="page"][href="index.html"]'
+      );
+      if (homeLink) homeLink.setAttribute("aria-current", "page");
+    }
+
+    if (currentPage === "index.html") {
+      setupScrollSpy();
+    }
+  };
+
+  const setupScrollSpy = () => {
+    const sections = document.querySelectorAll("section[id]");
+    if (sections.length === 0) return;
+
+    const anchorLinks = document.querySelectorAll(
+      '.nav-link[data-link-type="anchor"]'
+    );
+    const homeLink = document.querySelector(
+      '.nav-link[data-link-type="page"][href="index.html"]'
+    );
+    const headerHeight =
+      parseInt(
+        getComputedStyle(document.documentElement).getPropertyValue(
+          "--header-height"
+        ),
+        10
+      ) || 80;
+
+    const onScroll = () => {
+      const scrollPosition = window.scrollY + headerHeight;
+      let currentSectionId = null;
+
+      sections.forEach((section) => {
+        if (scrollPosition >= section.offsetTop) {
+          currentSectionId = section.id;
+        }
+      });
+
+      let activeLinkFound = false;
+      anchorLinks.forEach((link) => {
+        const sectionId = link
+          .getAttribute("href")
+          .substring(link.getAttribute("href").indexOf("#") + 1);
+        if (sectionId === currentSectionId) {
+          link.setAttribute("aria-current", "page");
+          activeLinkFound = true;
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+
+      // If no section is active, highlight Home link, otherwise remove its highlight
+      if (homeLink) {
+        if (!activeLinkFound) {
+          homeLink.setAttribute("aria-current", "page");
+        } else {
+          homeLink.removeAttribute("aria-current");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    onScroll(); // Run on load
   };
 
   // Public API

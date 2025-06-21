@@ -5,7 +5,7 @@
       "id": "reco-cyberpunk-001",
       "gameId": "pc-witcher-3-008",
       "title": "The Witcher 3: Wild Hunt",
-      "cover": "assets/images/games/witcher-3.jpg",
+      "cover": "assets/images/witcher-3.jpg",
       "price": 49.99,
       "reason": "Same developer, epic RPG with rich storytelling"
     },
@@ -13,7 +13,7 @@
       "id": "reco-cyberpunk-002",
       "gameId": "pc-baldurs-gate-3-010",
       "title": "Baldur's Gate 3",
-      "cover": "assets/images/games/baldurs-gate-3.jpg",
+      "cover": "assets/images/baldurs-gate-3.jpg",
       "price": 79.99,
       "reason": "Deep RPG with meaningful choices and consequences"
     },
@@ -21,7 +21,7 @@
       "id": "reco-cyberpunk-003",
       "gameId": "xbox-halo-infinite-001",
       "title": "Halo Infinite",
-      "cover": "assets/images/games/halo-infinite.jpg",
+      "cover": "assets/images/halo-infinite.jpg",
       "price": 89.99,
       "reason": "Futuristic sci-fi setting with action gameplay"
     },
@@ -29,7 +29,7 @@
       "id": "reco-cyberpunk-004",
       "gameId": "pc-red-dead-redemption-2-006",
       "title": "Red Dead Redemption 2",
-      "cover": "assets/images/games/red-dead-redemption-2.jpg",
+      "cover": "assets/images/red-dead-redemption-2.jpg",
       "price": 84.99,
       "reason": "Open-world action with immersive storytelling"
     }
