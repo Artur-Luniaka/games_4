@@ -2,7 +2,7 @@
 const headerInjectionModule = (() => {
   "use strict";
 
-  // Header HTML template with unique burger menu design
+  // Header HTML template
   const createHeaderTemplate = () => {
     return `
             <header class="site-header" role="banner">
@@ -42,54 +42,75 @@ const headerInjectionModule = (() => {
                                 Cart
                                 <span class="cart-count" id="cartItemCount">0</span>
                             </a>
-                            <button class="mobile-menu-toggle" 
-                                    aria-label="Toggle mobile menu" 
-                                    aria-expanded="false"
-                                    aria-controls="mobileMenu">
-                                <div class="burger-container">
-                                    <div class="burger-line burger-line-1"></div>
-                                    <div class="burger-line burger-line-2"></div>
-                                    <div class="burger-line burger-line-3"></div>
-                                    <div class="burger-circle"></div>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-                    <div class="mobile-menu-container">
-                        <ul class="mobile-nav-menu">
-                            <li class="mobile-nav-item">
-                                <a href="index.html" class="mobile-nav-link" aria-current="page">
-                                    <span class="mobile-nav-icon">🏠</span>
-                                    Home
-                                </a>
-                            </li>
-                            <li class="mobile-nav-item">
-                                <a href="game-catalog.html" class="mobile-nav-link">
-                                    <span class="mobile-nav-icon">🎮</span>
-                                    Games
-                                </a>
-                            </li>
-                            <li class="mobile-nav-item">
-                                <a href="shopping-cart.html" class="mobile-nav-link">
-                                    <span class="mobile-nav-icon">🛒</span>
-                                    Cart
-                                    <span class="mobile-cart-count" id="mobileCartCount">0</span>
-                                </a>
-                            </li>
-                        </ul>
-                        
-                        <div class="mobile-menu-footer">
-                            <div class="mobile-contact-info">
-                                <p>📧 hello@gamevault.com.au</p>
-                                <p>📱 +61 2 1234 5678</p>
-                            </div>
                         </div>
                     </div>
                 </div>
             </header>
+        `;
+  };
+
+  // Mobile Menu Toggle Button HTML template
+  const createToggleTemplate = () => {
+    return `
+            <button class="mobile-menu-toggle" 
+                    aria-label="Toggle mobile menu" 
+                    aria-expanded="false"
+                    aria-controls="mobileMenu">
+                <div class="burger-container">
+                    <div class="burger-line burger-line-1"></div>
+                    <div class="burger-line burger-line-2"></div>
+                    <div class="burger-line burger-line-3"></div>
+                </div>
+            </button>
+        `;
+  };
+
+  // Mobile Menu HTML template, to be injected separately
+  const createMobileMenuTemplate = () => {
+    return `
+            <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+                <div class="mobile-menu-container">
+                    <ul class="mobile-nav-menu">
+                        <li class="mobile-nav-item">
+                            <a href="index.html" class="mobile-nav-link" data-link-type="page">
+                                <span class="mobile-nav-icon">🏠</span>
+                                Home
+                            </a>
+                        </li>
+                        <li class="mobile-nav-item">
+                            <a href="game-catalog.html" class="mobile-nav-link" data-link-type="page">
+                                <span class="mobile-nav-icon">🎮</span>
+                                Games
+                            </a>
+                        </li>
+                        <li class="mobile-nav-item">
+                            <a href="index.html#expert-picks" class="mobile-nav-link" data-link-type="anchor">
+                                <span class="mobile-nav-icon">⭐</span>
+                                Expert Picks
+                            </a>
+                        </li>
+                        <li class="mobile-nav-item">
+                            <a href="index.html#customer-stories" class="mobile-nav-link" data-link-type="anchor">
+                                <span class="mobile-nav-icon">💬</span>
+                                Stories
+                            </a>
+                        </li>
+                        <li class="mobile-nav-item">
+                            <a href="shopping-cart.html" class="mobile-nav-link" data-link-type="page">
+                                <span class="mobile-nav-icon">🛒</span>
+                                Cart
+                                <span class="mobile-cart-count" id="mobileCartCount">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mobile-menu-footer">
+                        <div class="mobile-contact-info">
+                            <p>📧 hello@gamevault.com.au</p>
+                            <p>📱 +61 2 1234 5678</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         `;
   };
 
@@ -119,7 +140,7 @@ const headerInjectionModule = (() => {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                max-width: var(--container-max-width);
+                width: 100%;
                 margin: 0 auto;
                 padding: 0 var(--spacing-lg);
                 height: var(--header-height);
@@ -251,106 +272,89 @@ const headerInjectionModule = (() => {
                 animation: pulse 2s infinite;
             }
 
-            /* Mobile Menu Toggle */
+            /* --- Mobile Menu Toggle & Burger Icon --- */
             .mobile-menu-toggle {
-                display: none;
-                background: none;
-                border: none;
+                display: none; /* Hidden by default */
+                position: fixed;
+                top: 18px; /* Adjust to vertically center in header */
+                right: var(--spacing-lg); /* Align with header padding */
+                background: transparent;
+                border: 1px solid transparent;
+                width: 44px;
+                height: 44px;
+                padding: 10px;
                 cursor: pointer;
-                padding: var(--spacing-sm);
-                border-radius: var(--radius-md);
-                transition: all var(--transition-fast);
-            }
-
-            .mobile-menu-toggle:hover {
-                background: rgba(230, 126, 34, 0.1);
+                z-index: 1002; /* Above everything */
+                transition: border-color 0.3s ease;
+                border-radius: var(--radius-sm);
             }
 
             .burger-container {
+                width: 100%;
+                height: 100%;
                 position: relative;
-                width: 30px;
-                height: 30px;
+            }
+
+            .burger-line {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: var(--neutral-800);
+                border-radius: 3px;
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+
+            .burger-line-1 { top: 0; }
+            .burger-line-2 { top: 50%; transform: translateY(-50%); }
+            .burger-line-3 { bottom: 0; }
+
+            /* Animate to 'X' */
+            .mobile-menu-toggle[aria-expanded="true"] {
+                border-color: var(--neutral-400);
+            }
+
+            .mobile-menu-toggle[aria-expanded="true"] .burger-line-1 {
+                transform: translateY(8.5px) rotate(45deg);
+            }
+
+            .mobile-menu-toggle[aria-expanded="true"] .burger-line-2 {
+                transform: scaleX(0);
+                transition: transform 0.15s ease;
+            }
+
+            .mobile-menu-toggle[aria-expanded="true"] .burger-line-3 {
+                transform: translateY(-8.5px) rotate(-45deg);
+            }
+
+            /* --- Full-Screen Mobile Menu Overlay --- */
+            .mobile-menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: var(--neutral-100);
+                z-index: 1001; /* Below toggle, above header */
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-            }
-
-            .burger-line {
-                width: 20px;
-                height: 2px;
-                background: var(--neutral-700);
-                border-radius: 1px;
-                transition: all var(--transition-normal);
-                position: absolute;
-            }
-
-            .burger-line-1 {
-                transform: translateY(-6px);
-            }
-
-            .burger-line-2 {
-                transform: translateY(0);
-            }
-
-            .burger-line-3 {
-                transform: translateY(6px);
-            }
-
-            .burger-circle {
-                position: absolute;
-                width: 30px;
-                height: 30px;
-                border: 2px solid transparent;
-                border-radius: 50%;
-                transition: all var(--transition-normal);
-            }
-
-            /* Active burger state */
-            .mobile-menu-toggle[aria-expanded="true"] .burger-line-1 {
-                transform: translateY(0) rotate(45deg);
-            }
-
-            .mobile-menu-toggle[aria-expanded="true"] .burger-line-2 {
                 opacity: 0;
-                transform: translateX(-10px);
-            }
-
-            .mobile-menu-toggle[aria-expanded="true"] .burger-line-3 {
-                transform: translateY(0) rotate(-45deg);
-            }
-
-            .mobile-menu-toggle[aria-expanded="true"] .burger-circle {
-                border-color: var(--primary-color);
-                transform: scale(1.2);
-            }
-
-            /* Mobile Menu */
-            .mobile-menu {
-                position: fixed;
-                top: var(--header-height);
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0.8);
-                backdrop-filter: blur(10px);
-                transform: translateX(-100%);
-                transition: transform var(--transition-normal);
-                z-index: 999;
+                visibility: hidden;
+                transform: scale(1.05);
+                transition: opacity 0.3s ease, visibility 0s 0.3s, transform 0.3s ease;
             }
 
             .mobile-menu.active {
-                transform: translateX(0);
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+                transition: opacity 0.3s ease, visibility 0s 0s, transform 0.3s ease;
             }
 
             .mobile-menu-container {
-                background: var(--neutral-100);
-                height: 100%;
-                max-width: 300px;
-                padding: var(--spacing-xl);
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                text-align: center;
             }
 
             .mobile-nav-menu {
@@ -360,124 +364,54 @@ const headerInjectionModule = (() => {
             }
 
             .mobile-nav-item {
-                margin-bottom: var(--spacing-md);
+                margin: var(--spacing-md) 0;
             }
 
             .mobile-nav-link {
                 display: flex;
                 align-items: center;
                 gap: var(--spacing-md);
-                padding: var(--spacing-md);
+                font-size: 1.8rem;
+                font-weight: 500;
                 color: var(--neutral-700);
                 text-decoration: none;
-                border-radius: var(--radius-md);
-                transition: all var(--transition-fast);
-                font-weight: 500;
+                padding: var(--spacing-sm);
+                transition: color 0.2s ease;
             }
 
-            .mobile-nav-link:hover {
-                background: rgba(230, 126, 34, 0.1);
+            .mobile-nav-link:hover,
+            .mobile-nav-link.active {
                 color: var(--primary-color);
-                transform: translateX(5px);
             }
 
             .mobile-nav-icon {
-                font-size: 1.25rem;
-                width: 24px;
-                text-align: center;
+                font-size: 1.6rem;
+                color: var(--neutral-500);
             }
-
+            
             .mobile-cart-count {
                 background: var(--primary-color);
-                color: var(--neutral-100);
-                font-size: 0.75rem;
-                font-weight: 600;
-                padding: 2px 6px;
+                color: white;
+                font-size: 1rem;
                 border-radius: 50%;
-                min-width: 18px;
-                height: 18px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-left: auto;
+                padding: 0.2em 0.5em;
+                margin-left: var(--spacing-sm);
             }
 
             .mobile-menu-footer {
-                border-top: 1px solid var(--neutral-300);
-                padding-top: var(--spacing-lg);
+                position: absolute;
+                bottom: var(--spacing-xl);
+                text-align: center;
+                color: var(--neutral-500);
             }
-
-            .mobile-contact-info p {
-                color: var(--neutral-600);
-                font-size: 0.875rem;
-                margin-bottom: var(--spacing-xs);
-            }
-
+            
             /* Responsive Design */
             @media (max-width: 768px) {
-                .header-container {
-                    display: flex;
-                    justify-content: space-between;
-                }
-
                 .header-navigation, .desktop-cart {
                     display: none;
                 }
-
-                .header-right {
-                    gap: 0;
-                }
-
                 .mobile-menu-toggle {
                     display: block;
-                }
-
-                .header-container {
-                    padding: 0 var(--spacing-md);
-                }
-
-                .logo-title {
-                    font-size: 1.25rem;
-                }
-
-                .logo-subtitle {
-                    font-size: 0.625rem;
-                }
-
-                .logo-icon {
-                    font-size: 1.5rem;
-                }
-            }
-
-            @media (max-width: 360px) {
-                .header-container {
-                    padding: 0 var(--spacing-sm);
-                }
-
-                .logo-title {
-                    font-size: 1.125rem;
-                }
-
-                .logo-subtitle {
-                    font-size: 0.5rem;
-                }
-
-                .logo-icon {
-                    font-size: 1.25rem;
-                }
-
-                .burger-container {
-                    width: 25px;
-                    height: 25px;
-                }
-
-                .burger-line {
-                    width: 16px;
-                }
-
-                .burger-circle {
-                    width: 25px;
-                    height: 25px;
                 }
             }
 
@@ -536,69 +470,82 @@ const headerInjectionModule = (() => {
     return style;
   };
 
-  // Initialize header functionality
   const initializeHeader = () => {
-    const headerContainer = document.getElementById("header-container");
-    if (!headerContainer) return;
-
-    // Inject header HTML
-    headerContainer.innerHTML = createHeaderTemplate();
-
-    // Inject header styles
-    document.head.appendChild(createHeaderStyles());
-
-    // Initialize mobile menu functionality
-    initializeMobileMenu();
-
-    // Initialize scroll effects
-    initializeScrollEffects();
-
-    // Update cart count from localStorage
     updateCartCount();
-
-    // Set active link
+    initializeMobileMenu();
+    initializeScrollEffects();
     setActiveLink();
+    setupScrollSpy();
+    setupAnchorScroll();
   };
 
-  // Mobile menu functionality
+  const setupAnchorScroll = () => {
+    document
+      .querySelectorAll(
+        '.nav-link[data-link-type="anchor"], .mobile-nav-link[data-link-type="anchor"]'
+      )
+      .forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          const [path, targetId] = href.split("#");
+
+          const isHomePage =
+            window.location.pathname.endsWith("/") ||
+            window.location.pathname.endsWith("/index.html") ||
+            window.location.pathname === "";
+
+          if (
+            (path === "index.html" || path === "") &&
+            isHomePage &&
+            targetId
+          ) {
+            e.preventDefault();
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+              const headerOffset =
+                document.querySelector(".site-header").offsetHeight;
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition =
+                elementPosition + window.pageYOffset - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+
+              // Close mobile menu if open
+              const mobileMenu = document.getElementById("mobileMenu");
+              if (mobileMenu.classList.contains("active")) {
+                const mobileMenuToggle = document.querySelector(
+                  ".mobile-menu-toggle"
+                );
+                mobileMenuToggle.click();
+              }
+            }
+          }
+        });
+      });
+  };
+
   const initializeMobileMenu = () => {
-    const menuToggle = document.querySelector(".mobile-menu-toggle");
+    const toggleButton = document.querySelector(".mobile-menu-toggle");
     const mobileMenu = document.getElementById("mobileMenu");
-    const body = document.body;
 
-    if (!menuToggle || !mobileMenu) return;
+    if (!toggleButton || !mobileMenu) return;
 
-    menuToggle.addEventListener("click", () => {
-      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+    toggleButton.addEventListener("click", () => {
+      const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
+      const newIsExpanded = !isExpanded;
 
-      menuToggle.setAttribute("aria-expanded", !isExpanded);
-      mobileMenu.setAttribute("aria-hidden", isExpanded);
+      toggleButton.setAttribute("aria-expanded", newIsExpanded);
+      mobileMenu.setAttribute("aria-hidden", !newIsExpanded);
+      mobileMenu.classList.toggle("active");
 
-      if (!isExpanded) {
-        mobileMenu.classList.add("active");
-        body.style.overflow = "hidden";
-      } else {
-        mobileMenu.classList.remove("active");
-        body.style.overflow = "";
-      }
-    });
-
-    // Close menu when clicking outside
-    mobileMenu.addEventListener("click", (e) => {
-      if (e.target === mobileMenu) {
-        menuToggle.click();
-      }
-    });
-
-    // Close menu on escape key
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
-        menuToggle.click();
-      }
+      document.body.style.overflow = newIsExpanded ? "hidden" : "";
     });
   };
 
-  // Scroll effects
   const initializeScrollEffects = () => {
     const header = document.querySelector(".site-header");
     if (!header) return;
@@ -629,7 +576,6 @@ const headerInjectionModule = (() => {
     window.addEventListener("scroll", requestTick, { passive: true });
   };
 
-  // Update cart count
   const updateCartCount = () => {
     try {
       const cartData = JSON.parse(localStorage.getItem("gameVaultCart")) || [];
@@ -731,22 +677,24 @@ const headerInjectionModule = (() => {
     onScroll(); // Run on load
   };
 
-  // Public API
-  return {
-    initialize: initializeHeader,
-    updateCartCount: updateCartCount,
+  document.addEventListener("DOMContentLoaded", () => {
+    const headerContainer = document.getElementById("header-container");
+    if (headerContainer) {
+      headerContainer.innerHTML = createHeaderTemplate();
+
+      // Inject menu and a SEPARATE toggle button into the body
+      document.body.insertAdjacentHTML("beforeend", createMobileMenuTemplate());
+      document.body.insertAdjacentHTML("beforeend", createToggleTemplate());
+
+      const dynamicStyles = createHeaderStyles();
+      document.head.appendChild(dynamicStyles);
+
+      initializeHeader();
+    }
+  });
+
+  // Expose functions to other modules if needed
+  window.headerInjectionModule = {
+    updateCartCount,
   };
 })();
-
-// Initialize header when DOM is loaded
-if (document.readyState === "loading") {
-  document.addEventListener(
-    "DOMContentLoaded",
-    headerInjectionModule.initialize
-  );
-} else {
-  headerInjectionModule.initialize();
-}
-
-// Export for use in other modules
-export default headerInjectionModule;
