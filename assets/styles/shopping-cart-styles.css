@@ -262,18 +262,20 @@
 }
 
 .cart-summary {
-  background: linear-gradient(135deg, var(--neutral-800), var(--neutral-900));
-  color: var(--neutral-100);
-  border: 1px solid var(--primary-color);
-  border-radius: var(--radius-xl);
+  background: var(--neutral-800);
+  color: var(--neutral-300);
   padding: var(--spacing-xl);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 0 15px var(--primary-dark);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  position: sticky;
+  top: 120px;
 }
 
 .cart-summary h3 {
-  font-size: 1.25rem;
-  color: var(--neutral-800);
-  margin-bottom: 0;
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  color: var(--neutral-100);
 }
 
 .summary-items {
